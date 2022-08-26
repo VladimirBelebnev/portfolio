@@ -411,7 +411,7 @@ a {
 .mobile__icon {
   -o-object-fit: cover;
   object-fit: cover;
-  height: 30px;
+  height: 32px;
 }
 
 @media (max-width: 1680px) {
