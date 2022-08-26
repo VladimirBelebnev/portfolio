@@ -1,1 +1,68 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./css/vendor.css"><link rel="stylesheet" href="./css/main.css"><title>Веб–разработка</title></head><body><header class="header"><div class="container"><div class="header__wrap"><a class="header__logo" href="#hero"><img src="./img/logo.webp" alt="logo"> </a><button class="burger"><span class="burger-line top-line"></span> <span class="burger-line mid-line"></span> <span class="burger-line bottom-line"></span></button><div class="menu"><ul class="menu__items"><li class="menu__item"><a href="#">Обо мне</a></li><li class="menu__item"><a href="#">Мои работы</a></li><li class="menu__item"><a href="#">Услуги</a></li><li class="menu__item"><a href="#">Отзывы</a></li></ul><a target="_blank" class="menu__github" href="https://github.com/VladimirBelebnev"><img src="./img/svg/github.svg" alt="github logo"> </a><button class="btn menu__btn">Заявка</button></div></div></div></header><div class="mobile hidden"><ul class="mobile__items"><li class="mobile__item"><a href="#">Обо мне</a></li><li class="mobile__item"><a href="#">Мои услуги</a></li><li class="mobile__item"><a href="#">Мои работы</a></li><li class="mobile__item"><a href="#">Этапы работы</a></li><li class="mobile__item"><a href="#">Заказать</a></li><li class="mobile__item"><a href="#">Часто задаваемые вопросы</a></li></ul><div class="mobile__contact"><a href="#"><img class="mobile__icon" src="./img/svg/vk.svg" alt="vk logo"></a><a href="#"><img class="mobile__icon" src="./img/svg/whatsapp.svg" alt="whatsapp logo"></a><a href="#"><img class="mobile__icon" src="./img/svg/telegram.svg" alt="telegram logo"></a><a href="#"><img class="mobile__icon" src="./img/svg/mail.svg" alt="mail logo"></a></div></div><script src="./js/main.js" defer="defer"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Веб–разработка</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <a class="header__logo" href="#hero">
+                    <img src="./img/logo.webp" alt="logo">
+                </a>
+                <button class="burger">
+                    <span class="burger-line top-line"></span>
+                    <span class="burger-line mid-line"></span>
+                    <span class="burger-line bottom-line"></span>
+                </button>
+                <div class="menu">
+                    <ul class="menu__items">
+                        <li class="menu__item"><a href="#">Обо мне</a></li>
+                        <li class="menu__item"><a href="#">Мои работы</a></li>
+                        <li class="menu__item"><a href="#">Услуги</a></li>
+                        <li class="menu__item"><a href="#">Отзывы</a></li>
+                    </ul>
+                    <a target="_blank" class="menu__github" href="https://github.com/VladimirBelebnev">
+                        <img src="./img/svg/github.svg" alt="github logo">
+                    </a>
+                    <button class="btn menu__btn">Заявка</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile hidden">
+        <ul class="mobile__items">
+            <li class="mobile__item"><a href="#">Обо мне</a></li>
+            <li class="mobile__item"><a href="#">Мои услуги</a></li>
+            <li class="mobile__item"><a href="#">Мои работы</a></li>
+            <li class="mobile__item"><a href="#">Этапы работы</a></li>
+            <li class="mobile__item"><a href="#">Заказать</a></li>
+            <li class="mobile__item"><a href="#">Часто задаваемые вопросы</a></li>
+        </ul>
+        <div class="mobile__contact">
+            <a href="#"><img class="mobile__icon" src="./img/svg/vk.svg" alt="vk logo"></a>
+            <a href="#">
+            <svg class="mobile__icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect y="0.0202637" width="30" height="29.6522" fill="url(#pattern0)" />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_661_14" transform="translate(0 -0.0058651) scale(0.00393701 0.00398319)" />
+                    </pattern>
+                    <image id="image0_661_14" width="254" height="254"
+						xlink:href="data:image/png;base64,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" />
+                </defs>
+            </svg></a>
+            <a href="#"><img class="mobile__icon" src="./img/svg/telegram.svg" alt="telegram logo"></a>
+            <a href="#"><img class="mobile__icon" src="./img/svg/mail.svg" alt="mail logo"></a>
+        </div>
+    </div>
+
+    <script src="./js/main.js" defer></script>
+</body>
+</html>

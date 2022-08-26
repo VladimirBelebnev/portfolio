@@ -12,6 +12,7 @@ const burger = () => {
         if (window.innerWidth > 992) {
             burger.classList.remove('active');
             mobileMenu.classList.add('hidden');
+            document.body.classList.remove('overflow');
         }
     });
 };
