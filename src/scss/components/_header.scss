@@ -90,13 +90,13 @@
     display: flex;
     height: 100vh;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 200px 0 100px;
+    gap: 120px;
     animation: anim 1s ease;
     &__items {
         margin: 0;
         padding: 0;
+        margin-top: 160px;
         list-style-type: none;
         display: flex;
         gap: 45px;
@@ -105,7 +105,7 @@
         align-items: center;
     }
     &__item {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 500;
         color: $white;
         transition: color .3s;
@@ -134,6 +134,7 @@
     }
     &__contact {
         display: flex;
+        align-items: center;
         gap: 30px;
     }
     &__icon {
@@ -253,9 +254,9 @@
 
 @media (max-width: 768px) {
     .mobile {
-        padding: 180px 0 80px;
-        &__item {
-            font-size: 20px;
+        gap: 100px;
+        &__items {
+            margin-top: 150px;
         }
     }
 }
@@ -270,11 +271,17 @@
         }
     }
     .mobile {
-        padding: 180px 0 90px;
         &__icon {
            img {
              height: 30px;
            }
+        }
+        &__items {
+            margin-top: 140px;
+            gap: 40px;
+        }
+        &__item {
+            font-size: 18px;
         }
     }
 }
@@ -285,6 +292,12 @@
             img {
                 width: 168px;
             }
+        }
+    }
+    .mobile {
+        gap: 90px;
+        &__items {
+            gap: 35px;
         }
     }
 }
