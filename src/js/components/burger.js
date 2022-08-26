@@ -5,7 +5,7 @@ const burger = () => {
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         mobileMenu.classList.toggle('hidden');
-        document.body.style.overflow = 'hidden';
+        document.body.classList.toggle('overflow');
     });
 
     window.addEventListener('resize', () => {

@@ -42,6 +42,10 @@ a {
   display: none !important;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 @-webkit-keyframes anim {
   0% {
     opacity: 0;
@@ -404,15 +408,10 @@ a {
   align-items: center;
   gap: 30px;
 }
-.mobile__icon img {
-  opacity: 1;
-  height: 35px;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-.mobile__icon img:hover {
-  opacity: 0.85;
+.mobile__icon {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 30px;
 }
 
 @media (max-width: 1680px) {
@@ -512,9 +511,6 @@ a {
   }
   .header__logo img {
     width: 176px;
-  }
-  .mobile__icon img {
-    height: 30px;
   }
   .mobile__items {
     margin-top: 140px;

@@ -138,14 +138,8 @@
         gap: 30px;
     }
     &__icon {
-        img {
-            opacity: 1;
-            height: 35px;
-            transition: opacity .3s;
-        }
-        img:hover {
-            opacity: 0.85;
-        }
+        object-fit: cover;
+        height: 30px;
     }
 }
 
@@ -271,11 +265,6 @@
         }
     }
     .mobile {
-        &__icon {
-           img {
-             height: 30px;
-           }
-        }
         &__items {
             margin-top: 140px;
             gap: 40px;

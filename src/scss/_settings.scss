@@ -38,6 +38,10 @@ a {
 	display: none !important;
 }
 
+.overflow {
+	overflow: hidden;
+}
+
 @keyframes anim {
 	0% {
 		opacity: 0;
