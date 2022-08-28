@@ -3,25 +3,14 @@
     position: relative;
     overflow: hidden;
     &__row {
-        transform: translateX(100%);
-        width: 100%;
-        display: inline-block;
+        display: flex;
+        gap: 50px;
         white-space: nowrap;
     }
     &__row:last-child {
         flex-wrap: wrap-reverse;
         margin-top: 35px;
-        transform: translateX(0%);
     }
-    &__row:after {
-        position: absolute;
-        content: ' ';
-        right: 0;
-        top: 0;
-        width: 100px;
-        height: 100%;
-    }
-
     &__item {
         pointer-events: none;
         padding: 0 50px;
