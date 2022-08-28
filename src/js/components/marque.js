@@ -3,18 +3,17 @@ const marque = () => {
           marqueeLeft = document.querySelector('.left-move'),
           marqueeRight = document.querySelector('.right-move'),
           wrapperWidth = wrapper.offsetWidth,
-          marqueeRightWidth = marqueeRight.scrollWidth,
-          marqueeLeftWidth = marqueeLeft.scrollWidth;
+          marqueeWidth = marqueeRight.scrollWidth;
 
     function moveLeft() {
-        let currentTX = getComputedStyle(marqueeLeftWidth).transform.split(',');
+        let currentTX = getComputedStyle(marqueeLeft).transform.split(',');
         if (currentTX[4] === undefined) {
             currentTX = -1;
         } else {
             currentTX = parseFloat(currentTX[4]) - 1;
         }
 
-        if (-currentTX >= marqueeLeftWidth) {
+        if (-currentTX >= marqueeWidth) {
             marqueeLeft.style.transform = 'translateX(' + wrapperWidth + 'px)';
         } else {
             marqueeLeft.style.transform = 'translateX(' + currentTX + 'px)';
@@ -22,22 +21,22 @@ const marque = () => {
     }
 
     function moveRight() {
-        let currentTX = getComputedStyle(marqueeRightWidth).transform.split(',');
+        let currentTX = getComputedStyle(marqueeRight).transform.split(',');
         if (currentTX[4] === undefined) {
-            currentTX = 1;
+            currentTX = -1;
         } else {
-            currentTX = parseFloat(currentTX[4]) + 1;
+            currentTX = parseFloat(currentTX[4]) - 1;
         }
 
-        if (-currentTX <= -marqueeRightWidth) {
-            marqueeRight.style.transform = 'translateX(' + -wrapperWidth + 'px)';
+        if (-currentTX >= marqueeWidth) {
+            marqueeRight.style.transform = 'translateX(' + wrapperWidth + 'px)';
         } else {
             marqueeRight.style.transform = 'translateX(' + currentTX + 'px)';
         }
     }
 
-    setInterval(moveLeft, 40);
-    setInterval(moveRight, 40);
+    setInterval(moveLeft, 1);
+    setInterval(moveRight, 1);
 };
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -80,20 +80,20 @@ const marque = () => {
     let currentTX = getComputedStyle(marqueeRight).transform.split(',');
 
     if (currentTX[4] === undefined) {
-      currentTX = 1;
+      currentTX = -1;
     } else {
-      currentTX = parseFloat(currentTX[4]) + 1;
+      currentTX = parseFloat(currentTX[4]) - 1;
     }
 
-    if (-currentTX <= -marqueeWidth) {
-      marqueeRight.style.transform = 'translateX(' + -wrapperWidth + 'px)';
+    if (-currentTX >= marqueeWidth) {
+      marqueeRight.style.transform = 'translateX(' + wrapperWidth + 'px)';
     } else {
       marqueeRight.style.transform = 'translateX(' + currentTX + 'px)';
     }
   }
 
-  setInterval(moveLeft, 40);
-  setInterval(moveRight, 40);
+  setInterval(moveLeft, 1);
+  setInterval(moveRight, 1);
 };
 
 window.addEventListener('DOMContentLoaded', () => {

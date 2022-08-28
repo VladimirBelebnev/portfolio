@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     &__row {
-        transform: translateX(30%);
+        transform: translateX(100%);
         width: 100%;
         display: inline-block;
         white-space: nowrap;
@@ -11,7 +11,7 @@
     &__row:last-child {
         flex-wrap: wrap-reverse;
         margin-top: 35px;
-        transform: translateX(-270%);
+        transform: translateX(0%);
     }
     &__row:after {
         position: absolute;
@@ -85,9 +85,6 @@
 @media (max-width: 576px) {
     .skills {
         padding: 60px 0;
-        &__row {
-            transform: translateX(50%);
-        }
         &__row:last-child {
             margin-top: 0;
             display: none;
