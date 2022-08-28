@@ -11,6 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_marque__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/marque */ "./src/js/components/marque.js");
+/* harmony import */ var _components_marque__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_marque__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -40,6 +43,61 @@ const burger = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   burger();
+});
+
+/***/ }),
+
+/***/ "./src/js/components/marque.js":
+/*!*************************************!*\
+  !*** ./src/js/components/marque.js ***!
+  \*************************************/
+/***/ (() => {
+
+const marque = () => {
+  const wrapper = document.querySelector('.skills'),
+        marqueeLeft = document.querySelector('.left-move'),
+        marqueeRight = document.querySelector('.right-move'),
+        wrapperWidth = wrapper.offsetWidth,
+        marqueeWidth = marqueeRight.scrollWidth;
+
+  function moveLeft() {
+    let currentTX = getComputedStyle(marqueeLeft).transform.split(',');
+
+    if (currentTX[4] === undefined) {
+      currentTX = -1;
+    } else {
+      currentTX = parseFloat(currentTX[4]) - 1;
+    }
+
+    if (-currentTX >= marqueeWidth) {
+      marqueeLeft.style.transform = 'translateX(' + wrapperWidth + 'px)';
+    } else {
+      marqueeLeft.style.transform = 'translateX(' + currentTX + 'px)';
+    }
+  }
+
+  function moveRight() {
+    let currentTX = getComputedStyle(marqueeRight).transform.split(',');
+
+    if (currentTX[4] === undefined) {
+      currentTX = 1;
+    } else {
+      currentTX = parseFloat(currentTX[4]) + 1;
+    }
+
+    if (-currentTX <= -marqueeWidth) {
+      marqueeRight.style.transform = 'translateX(' + -wrapperWidth + 'px)';
+    } else {
+      marqueeRight.style.transform = 'translateX(' + currentTX + 'px)';
+    }
+  }
+
+  setInterval(moveLeft, 40);
+  setInterval(moveRight, 40);
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  marque();
 });
 
 /***/ })

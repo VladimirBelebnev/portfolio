@@ -23,16 +23,12 @@
         }
     }
     .menu {
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: center;
         gap: 50px;
-        &__items {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 50px;
-            list-style-type: none;
-        }
+        list-style-type: none;
         &__item {
             font-size: 20px;
             font-weight: 500;
@@ -59,6 +55,23 @@
             transform: scaleX(1);
             transform-origin: left;
         }
+        &__item.none::before {
+            content: '';
+            position: static;
+            width: 0%;
+            height: 0px;
+            background: $white;
+            left: 0;
+            bottom: 0px;
+            transform: scaleX(0);
+            transform-origin: none;
+            transition: none;
+        }
+
+        &__item.none:hover::before {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
         &__github {
             display: flex;
             align-items: center;
@@ -70,9 +83,6 @@
             img:hover {
                 opacity: 0.85;
             }
-        }
-        &__btn {
-            font-size: 22px;
         }
     }
     .hidden {
@@ -123,7 +133,6 @@
         transform-origin: right;
         transition: transform .5s;
     }
-
     &__item:hover {
         color: #e7e7e7;
     }
@@ -140,33 +149,30 @@
     &__icon {
         object-fit: cover;
         height: 32px;
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all .3s;
+    }
+    &__icon:hover {
+        opacity: 0.9;
+        transform: translateY(-5px);
     }
 }
 
 @media (max-width: 1680px) {
     .header {
-        height: 100px;
+        height: 110px;
         &__logo {
             img {
                 width: 232px;
             }
         }
         .menu {
-            gap: 30px;
-            &__items {
-                gap: 30px;
-            }
-            &__item {
-                font-size: 18px;
-            }
+            gap: 40px;
             &__github {
                 img {
-                    width: 56px;
+                    width: 64px;
                 }
-            }
-            &__btn {
-                font-size: 20px;
-                padding: 15px 55px;
             }
         }
     }
@@ -180,21 +186,14 @@
             }
         }
         .menu {
-            gap: 25px;
-            &__items {
-                gap: 25px;
-            }
+            gap: 35px;
             &__item {
-                font-size: 16px;
+                font-size: 18px;
             }
             &__github {
                 img {
-                    width: 48px;
+                    width: 56px;
                 }
-            }
-            &__btn {
-                font-size: 18px;
-                padding: 15px 50px;
             }
         }
     }
@@ -210,20 +209,8 @@
         }
         .menu {
             gap: 30px;
-
-            &__items {
-                gap: 25px;
-            }
-
-            &__item {
-                font-size: 16px;
-            }
             &__github {
                 display: none;
-            }
-            &__btn {
-                font-size: 18px;
-                padding: 13px 40px;
             }
         }
     }
