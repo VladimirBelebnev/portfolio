@@ -955,7 +955,13 @@ a {
   .skills {
     padding: 60px 0;
   }
+  .skills__row {
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+  }
   .skills__row:last-child {
+    margin-top: 0;
     display: none;
   }
   .skills__item {

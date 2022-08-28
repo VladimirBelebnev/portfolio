@@ -85,7 +85,11 @@
 @media (max-width: 576px) {
     .skills {
         padding: 60px 0;
+        &__row {
+            transform: translateX(50%);
+        }
         &__row:last-child {
+            margin-top: 0;
             display: none;
         }
         &__item {
