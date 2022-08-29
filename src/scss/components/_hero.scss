@@ -193,11 +193,7 @@
             margin-top: 90px;
         }
         &__arrow {
-            right: 10%;
-            bottom: -3%;
-            img {
-                width: 48px;
-            }
+            display: none;
         }
     }
 }
@@ -227,16 +223,13 @@
            font-size: 20px;
            margin-top: 70px;
        }
-       &__arrow {
-             bottom: 0%;
-       }
     }
 }
 
 @media (max-width: 576px) {
     .hero {
-        height: 800px;
-        background-position: right 0px bottom 40px;
+        height: 775px;
+        background-position: right 0px bottom 20px;
         background-size: 400px;
         .container {
             padding-top: 150px;
@@ -252,18 +245,13 @@
             font-size: 18px;
             max-width: 350px;
         }
-        &__arrow {
-            img {
-                width: 42px;
-            }
-        }
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 750px;
-       background-position: right 0px bottom 50px;
+       height: 700px;
+       background-position: right 0px bottom 10px;
        background-size: 350px;
        .container {
            padding-top: 140px;

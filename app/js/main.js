@@ -11,8 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_marque__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/marque */ "./src/js/components/marque.js");
-/* harmony import */ var _components_marque__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_marque__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_marquee__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/marquee */ "./src/js/components/marquee.js");
+/* harmony import */ var _components_marquee__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_marquee__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -47,13 +47,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
-/***/ "./src/js/components/marque.js":
-/*!*************************************!*\
-  !*** ./src/js/components/marque.js ***!
-  \*************************************/
+/***/ "./src/js/components/marquee.js":
+/*!**************************************!*\
+  !*** ./src/js/components/marquee.js ***!
+  \**************************************/
 /***/ (() => {
 
+function marquee(selector, speed, sign) {
+  const parentSelector = document.querySelector(selector);
+  const firstElement = parentSelector.children[0];
+  let i = 0;
+  setInterval(function () {
+    firstElement.style.marginLeft = "".concat(sign).concat(i, "px");
 
+    if (i > firstElement.clientWidth) {
+      i = 0;
+    }
+
+    i = i + speed;
+  }, 0);
+}
+
+window.addEventListener('load', marquee('.marquee-left', 0.2, '-'));
+window.addEventListener('load', marquee('.marquee-right', 0.2, '+'));
 
 /***/ })
 

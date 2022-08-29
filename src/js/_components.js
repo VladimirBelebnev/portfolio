@@ -1,2 +1,2 @@
 import "./components/burger";
-import "./components/marque";
+import "./components/marquee";

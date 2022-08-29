@@ -1,20 +1,26 @@
 .skills {
     padding: 120px 0;
-    position: relative;
-    overflow: hidden;
     &__row {
-        display: flex;
-        gap: 50px;
+        overflow: hidden;
         white-space: nowrap;
+        .skills__marquee {
+            transform: translateX(0%);
+        }
     }
     &__row:last-child {
-        flex-wrap: wrap-reverse;
         margin-top: 35px;
+        .skills__marquee {
+            transform: translateX(-50%);
+        }
+    }
+    &__marquee {
+        width: auto;
+        display: inline-block;
     }
     &__item {
         pointer-events: none;
-        padding: 0 50px;
         height: 90px;
+        padding: 0 50px;
         filter: grayscale(100%);
         opacity: 0.9;
     }
