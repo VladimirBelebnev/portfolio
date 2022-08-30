@@ -6,7 +6,7 @@
     &__slider {
         width: 100%;
         padding-top: 80px;
-        padding-bottom: 90px;
+        padding-bottom: 60px;
     }
     &__slide {
         box-sizing: border-box;
@@ -149,7 +149,7 @@
         padding: 140px 0;
         &__slider {
              padding-top: 70px;
-            padding-bottom: 80px;
+              padding-bottom: 50px;
         }
         .wrapper {
             padding: 35px 25px;
@@ -234,7 +234,6 @@
         padding: 100px 0;
          &__slider {
             padding-top: 60px;
-             padding-bottom: 70px;
          }
         &__slide {
             height: 780px;
@@ -266,7 +265,6 @@
     .services {
          &__slider {
             padding-top: 50px;
-            padding-bottom: 60px;
          }
         padding: 90px 0;
         &__slide {
@@ -334,7 +332,7 @@
 @media (max-width: 576px) {
     .services {
         &__slider {
-            padding-bottom: 50px;
+            padding-bottom: 40px;
         }
         padding: 70px 0;
         &__slide {

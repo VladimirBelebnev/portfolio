@@ -1632,7 +1632,7 @@ a {
 .services__slider {
   width: 100%;
   padding-top: 80px;
-  padding-bottom: 90px;
+  padding-bottom: 60px;
 }
 .services__slide {
   -webkit-box-sizing: border-box;
@@ -1804,7 +1804,7 @@ a {
   }
   .services__slider {
     padding-top: 70px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
   }
   .services .wrapper {
     padding: 35px 25px;
@@ -1877,7 +1877,6 @@ a {
   }
   .services__slider {
     padding-top: 60px;
-    padding-bottom: 70px;
   }
   .services__slide {
     height: 780px;
@@ -1902,7 +1901,6 @@ a {
   }
   .services__slider {
     padding-top: 50px;
-    padding-bottom: 60px;
   }
   .services__slide {
     height: 760px;
@@ -1960,7 +1958,7 @@ a {
     padding: 70px 0;
   }
   .services__slider {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   .services__slide {
     height: 710px;
