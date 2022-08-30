@@ -36,7 +36,7 @@
             font-size: 20px;
             color: $text;
             opacity: 0;
-            transition: opacity .2s;
+            transition: all .2s;
         }
     }
     .photo__wrap:hover::before {
@@ -64,6 +64,9 @@
     }
     &__prev {
         right: 55px;
+    }
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0;
     }
     .swiper-slide-active {
         transform: scale(1.3) !important;
