@@ -1,0 +1,257 @@
+.quastion {
+    padding: 160px 0;
+    &__title {
+        justify-content: center;
+    }
+    &__wrap {
+        margin-top: 100px;
+    }
+    &__block {
+        padding: 40px 20px;
+        border-top: 2px solid #525252;
+    }
+    &__block:last-child {
+        border-bottom: 2px solid #525252;
+    }
+    .text__wrap {
+        position: relative;
+    }
+    .block {
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 150px;
+        }
+        &__title {
+            user-select: none;
+            font-weight: 500;
+            font-size: 32px;
+            color: $text;
+            cursor: pointer;
+            transition: color .3s;
+        }
+        &__title:hover {
+            color: #444;
+        }
+        &__text {
+            padding-top: 35px;
+            font-weight: 400;
+            font-size: 24px;
+            text-align: justify;
+            color: $text;
+            transition: all .3s ease-in-out;
+        }
+        &__btn {
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            width: 40px;
+            span {
+                display: inline-block;
+                width: 40px;
+                height: 3px;
+                background: #000;
+                transition: 0.3s all ease;
+            }
+            span:first-child {
+                position: absolute;
+                right: 0;
+                transform: rotate(0deg);
+            }
+            span:last-child {
+                position: absolute;
+                right: 0;
+                transform: rotate(90deg);
+            }
+        }
+        &__btn:hover span {
+            background: #333;
+        }
+        &__btn.active {
+            span:first-child {
+                transform: rotate(-45deg);
+            }
+            span:last-child {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.tabs-hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateY(-20%);
+}
+
+@media (max-width: 1680px) {
+    .quastion {
+        padding: 140px 0;
+        &__wrap {
+            margin-top: 80px;
+        }
+        &__block {
+            padding: 35px 20px;
+        }
+        .block {
+            &__header {
+                gap: 125px;
+            }
+            &__title {
+                font-size: 28px;
+            }
+            &__text {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .quastion {
+        padding: 110px 0;
+        &__wrap {
+            margin-top: 70px;
+        }
+        &__block {
+            padding: 30px 15px;
+        }
+        .block {
+            &__header {
+                gap: 100px;
+            }
+            &__title {
+                font-size: 26px;
+            }
+            &__text {
+                padding-top: 30px;
+                font-size: 20px;
+            }
+            &__btn {
+                width: 35px;
+                span {
+                    width: 35px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .quastion {
+        padding: 100px 0;
+        &__wrap {
+            margin-top: 60px;
+        }
+        .block {
+            &__header {
+                gap: 70px;
+            }
+            &__title {
+                font-size: 24px;
+            }
+            &__text {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .quastion {
+        padding: 90px 0;
+        &__title {
+            justify-content: flex-start;
+        }
+        &__block {
+            padding: 25px 15px;
+        }
+        .block {
+            &__header {
+                gap: 50px;
+            }
+            &__title {
+                font-size: 20px;
+            }
+            &__text {
+                padding-top: 25px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .quastion {
+        padding: 80px 0;
+        &__wrap {
+            margin-top: 50px;
+        }
+        &__block {
+             padding: 20px 15px;
+            border-top: 1px solid #525252;
+        }
+
+        &__block:last-child {
+            border-bottom: 1px solid #525252;
+        }
+        .block {
+            &__header {
+                gap: 30px;
+            }
+            &__title {
+                font-size: 18px;
+            }
+            &__text {
+                font-size: 16px;
+            }
+            &__btn {
+                width: 30px;
+
+                span {
+                    width: 30px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .quastion {
+        padding: 70px 0;
+        &__block {
+            padding: 20px 10px;
+        }
+        .block {
+            &__header {
+                gap: 15px;
+            }
+
+            &__title {
+                max-width: 370px;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .quastion {
+        padding: 60px 0;
+         &__wrap {
+             margin-top: 40px;
+         }
+        &__block {
+            padding: 20px 5px;
+        }
+    }
+}
