@@ -181,6 +181,14 @@
                 padding-top: 25px;
                 font-size: 18px;
             }
+            &__btn {
+                width: 30px;
+
+                span {
+                    width: 30px;
+                    height: 2px;
+                }
+            }
         }
     }
 }
@@ -208,14 +216,6 @@
             }
             &__text {
                 font-size: 16px;
-            }
-            &__btn {
-                width: 30px;
-
-                span {
-                    width: 30px;
-                    height: 2px;
-                }
             }
         }
     }
