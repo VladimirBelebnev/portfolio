@@ -6,7 +6,7 @@
     &__slider {
         padding-top: 120px;
         width: 100%;
-        height: 524px;
+        padding-bottom: 110px;
     }
     &__slide {
         border-radius: 20px;
@@ -28,7 +28,8 @@
             position: absolute;
             padding: 13px 50px;
             bottom: -15px;
-            left: 30%;
+            left: 50%;
+            margin-left: -111px;
             background: #FFFFFF;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             border-radius: 20px;
@@ -94,13 +95,13 @@
     .works {
         padding: 140px 0;
         &__slider {
-            height: 464px;
             padding-top: 120px;
+             padding-bottom: 100px;
         }
         &__slide {
             .photo__wrap::before {
                 padding: 12px 45px;
-                left: 26%;
+                margin-left: -101px;
                 font-size: 18px;
             }
         }
@@ -120,13 +121,13 @@
     .works {
         padding: 110px 0;
         &__slider {
-            height: 398px;
             padding-top: 100px;
+            padding-bottom: 90px;
         }
         &__slide {
             .photo__wrap::before {
                 padding: 12px 40px;
-                left: 25%;
+                margin-left: -91px;
             }
         }
     }
@@ -136,14 +137,14 @@
     .works {
         padding: 100px 0;
         &__slider {
-            height: 354px;
             padding-top: 90px;
+            padding-bottom: 80px;
         }
         &__slide {
             .photo__wrap::before {
                 padding: 12px 35px;
                 font-size: 16px;
-                left: 25%;
+                margin-left: -81px;
             }
         }
 
@@ -163,8 +164,8 @@
     .works {
         padding: 90px 0;
         &__slider {
-            height: 536px;
             padding-top: 70px;
+            padding-bottom: 55px;
         }
         &__slide {
             border-radius: 20px;
@@ -188,7 +189,7 @@
                 visibility: visible;
                 opacity: 1;
                 display: block;
-                left: 35%;
+                margin-left: -96px;
                 bottom: -12px;
                 font-size: 20px;
                 padding: 12px 40px;
@@ -202,7 +203,7 @@
         padding: 80px 0;
         &__slider {
             padding-top: 60px;
-            height: 412px;
+            padding-bottom: 50px;
         }
         &__slide {
             border-radius: 18px;
@@ -213,7 +214,6 @@
         }
         .swiper-slide-active {
             .photo__wrap::before {
-                left: 31%;
                 bottom: -12px;
                 font-size: 18px;
                 padding: 12px 40px;
@@ -227,7 +227,6 @@
         padding: 70px 0;
         &__slider {
             padding-top: 50px;
-            height: 364px;
         }
         &__slide {
             border-radius: 15px;
@@ -238,7 +237,7 @@
 
         .swiper-slide-active {
             .photo__wrap::before {
-                left: 30%;
+                 margin-left: -86px;
                 bottom: -12px;
                 font-size: 16px;
                 padding: 12px 35px;
@@ -252,93 +251,12 @@
         padding: 60px 0;
         &__slider {
             padding-top: 40px;
-            height: 352px;
+            padding-bottom: 45px;
         }
         .swiper-slide-active {
             .photo__wrap::before {
-                left: 31%;
+                margin-left: -76px;
                 padding: 10px 30px;
-            }
-        }
-    }
-}
-
-@media (max-width: 450px) {
-    .works {
-        &__slider {
-            height: 344px;
-        }
-
-        .swiper-slide-active {
-            .photo__wrap::before {
-                left: 30%;
-            }
-        }
-    }
-}
-
-@media (max-width: 420px) {
-    .works {
-        &__slider {
-            height: 328px;
-        }
-
-        .swiper-slide-active {
-            .photo__wrap::before {
-                left: 29%;
-            }
-        }
-    }
-}
-
-@media (max-width: 400px) {
-    .works {
-        &__slider {
-            height: 318px;
-        }
-
-        .swiper-slide-active {
-            .photo__wrap::before {
-                left: 28%;
-            }
-        }
-    }
-}
-
-@media (max-width: 380px) {
-    .works {
-        &__slider {
-            height: 306px;
-        }
-        .swiper-slide-active {
-            .photo__wrap::before {
-                left: 27%;
-            }
-        }
-    }
-}
-
-@media (max-width: 360px) {
-    .works {
-        &__slider {
-            height: 294px;
-        }
-        .swiper-slide-active {
-            .photo__wrap::before {
-                left: 26%;
-            }
-        }
-    }
-}
-
-@media (max-width: 340px) {
-    .works {
-        &__slider {
-            height: 278px;
-        }
-        .swiper-slide-active {
-            .photo__wrap::before {
-                left: 25%;
             }
         }
     }

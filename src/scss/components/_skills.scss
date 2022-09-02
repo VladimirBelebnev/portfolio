@@ -4,13 +4,13 @@
         overflow: hidden;
         white-space: nowrap;
         .skills__marquee {
-            transform: translateX(0%);
+            transform: translateX(5%);
         }
     }
     &__row:last-child {
         margin-top: 35px;
         .skills__marquee {
-            transform: translateX(-50%);
+            transform: translateX(-75%);
         }
     }
     &__marquee {
@@ -73,6 +73,7 @@
         padding: 70px 0;
         &__item {
             height: 60px;
+            padding: 0 27px;
         }
     }
 }
@@ -85,7 +86,7 @@
             display: none;
         }
         &__item {
-            padding: 0 25px;
+            padding: 0 22px;
         }
     }
 }

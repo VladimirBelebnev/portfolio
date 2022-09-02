@@ -16,6 +16,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_heroBtn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/heroBtn */ "./src/js/components/heroBtn.js");
+/* harmony import */ var _components_heroBtn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_heroBtn__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -48,6 +51,44 @@ const burger = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   burger();
+});
+
+/***/ }),
+
+/***/ "./src/js/components/heroBtn.js":
+/*!**************************************!*\
+  !*** ./src/js/components/heroBtn.js ***!
+  \**************************************/
+/***/ (() => {
+
+const heroBtn = () => {
+  const $ = function (s) {
+    let o = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
+    return o.querySelector(s);
+  };
+
+  const $$ = function (s) {
+    let o = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
+    return o.querySelectorAll(s);
+  };
+
+  $$('.hero__btn').forEach(el => el.addEventListener('mousemove', function (e) {
+    const pos = this.getBoundingClientRect();
+    const mx = e.clientX - pos.left - pos.width / 2;
+    const my = e.clientY - pos.top - pos.height / 2;
+    this.style.transform = 'translate(' + mx * 0.15 + 'px, ' + my * 0.3 + 'px)';
+    this.style.transform += 'rotate3d(' + mx * -0.1 + ', ' + my * -0.3 + ', 0, 12deg)';
+    this.children[0].style.transform = 'translate(' + mx * 0.025 + 'px, ' + my * 0.075 + 'px)';
+  }));
+  $$('.hero__btn').forEach(el => el.addEventListener('mouseleave', function () {
+    this.style.transform = 'translate3d(0px, 0px, 0px)';
+    this.style.transform += 'rotate3d(0, 0, 0, 0deg)';
+    this.children[0].style.transform = 'translate3d(0px, 0px, 0px)';
+  }));
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  heroBtn();
 });
 
 /***/ }),
@@ -167,23 +208,30 @@ window.addEventListener('DOMContentLoaded', () => {
 /***/ (() => {
 
 const tabs = () => {
-  const tabBtns = document.querySelectorAll('.block__header');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(item => {
-        if (item !== btn) {
-          item.parentNode.querySelector('.block__text').classList.add('tabs-hidden');
+  const tabs = document.querySelectorAll('.quastion__block');
+  tabs.forEach(tab => {
+    const tabHeader = tab.querySelector('.block__header'),
+          tabContent = tab.querySelector('.block__text'),
+          tabBtn = tab.querySelector('.block__btn');
+    tabHeader.addEventListener('click', () => {
+      tab.style.maxHeight = '180px';
+      tabs.forEach(item => {
+        if (item !== tab) {
+          item.querySelector('.block__text').classList.add('tabs-hidden');
+          item.style.maxHeight = '180px';
           item.querySelector('.block__btn').classList.remove('active');
-        } else {
-          if (!item.parentNode.querySelector('.block__text').classList.contains('tabs-hidden')) {
-            btn.parentNode.querySelector('.block__text').classList.add('tabs-hidden');
-            btn.querySelector('.block__btn').classList.remove('active');
-          } else {
-            btn.parentNode.querySelector('.block__text').classList.remove('tabs-hidden');
-            btn.querySelector('.block__btn').classList.add('active');
-          }
         }
       });
+
+      if (tabContent.classList.contains('tabs-hidden')) {
+        tab.style.maxHeight = '700px';
+        tabContent.classList.remove('tabs-hidden');
+        tabBtn.classList.add('active');
+      } else {
+        tabContent.classList.add('tabs-hidden');
+        tab.style.maxHeight = '180px';
+        tabBtn.classList.remove('active');
+      }
     });
   });
 };
