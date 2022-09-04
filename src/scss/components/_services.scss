@@ -1,406 +1,52 @@
 .services {
     padding: 160px 0;
-    .container {
-        position: relative;
-    }
-    &__slider {
-        width: 100%;
-        padding-top: 80px;
-        padding-bottom: 60px;
-    }
-    &__slide {
-        box-sizing: border-box;
-        height: 875px;
-    }
-    .wrapper {
-        background: #FFFFFF;
-        border-radius: 15px;
-        padding: 40px 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        border: 5px solid $services;
-    }
-    .check {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-    .add {
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-        &__title {
-            text-align: center;
-            font-weight: 500;
-            font-size: 24px;
-            color: $services;
-        }
-        &__block {
-            display: flex;
-            gap: 5px;
-            align-items: flex-start;
-        }
-        &__img {
-            width: 20px;
-        }
-        &__descr {
-            max-width: 330px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 120%;
-        }
-    }
-    .term {
-        font-weight: 500;
-        font-size: 24px;
-    }
-    .price {
-        font-weight: 500;
-        font-size: 32px;
-        color: $red;
-    }
-    .slide {
-        &__title {
-            text-align: center;
-            color: $services;
-            font-weight: 500;
-            font-size: 32px;
-        }
-        &__check {
-            display: flex;
-            align-items: center;
-            align-items: flex-start;
-            gap: 5px;
-            &-img {
-                width: 20px;
-            }
-            &-descr {
-                max-width: 330px;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 120%;
-                color: $text;
-            }
-        }
-        &__btn {
-            font-weight: 500;
-            font-size: 32px;
-            color: $white;
-            background: $red;
-            padding: 21px 60px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            transition: background .3s;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-        }
-        &__btn:hover {
-            background: #CA152D;
-        }
-    }
-    &__next,
-    &__prev {
-        position: absolute;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        top: 0;
-        right: 0;
-        opacity: 1;
-        transition: opacity .3s;
-
-        img {
-            height: 37px;
-        }
-    }
-
-    &__next:hover,
-    &__prev:hover {
-        opacity: 0.8;
-    }
-
-    &__prev {
-        right: 55px;
-    }
-    .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 0;
-    }
-    .swiper-pagination-bullet {
-        background: #999;
-        opacity: 1;
-    }
-    .swiper-pagination-bullet-active {
-        background: #0197F6;
-        opacity: 1;
-    }
-
-    .swiper-pagination-bullet:hover {
-        opacity: 0.7;
-        transition: opacity .2s;
+    &__title {
+        justify-content: center;
     }
 }
 
 @media (max-width: 1680px) {
     .services {
         padding: 140px 0;
-        &__slider {
-             padding-top: 70px;
-              padding-bottom: 50px;
-        }
-        .wrapper {
-            padding: 35px 25px;
-        }
-        .check {
-            gap: 12px;
-        }
-        .add {
-            gap: 12px;
-        }
-        .price {
-            font-size: 28px;
-        }
-        .slide {
-            &__title {
-                font-size: 28px;
-            }
-            &__btn {
-                font-size: 28px;
-                padding: 18px 55px;
-            }
-        }
-        &__next,
-        &__prev {
-            img {
-                height: 35px;
-            }
-        }
-
-        &__prev {
-            right: 50px;
-        }
+        
     }
 }
 
 @media (max-width: 1400px) {
     .services {
         padding: 110px 0;
-        &__slide {
-            height: 835px;
-        }
-        .wrapper {
-            padding: 30px 20px;
-        }
-        .check {
-            gap: 11px;
-        }
-        .term {
-            font-size: 22px;
-        }
-        .add {
-            gap: 11px;
-            &__title {
-                font-size: 22px;
-            }
-            &__descr {
-                font-size: 15px;
-            }
-        }
-        .price {
-            font-size: 26px;
-        }
-        .slide__check {
-            &-descr {
-                font-size: 15px;
-            }
-        }
-        .slide {
-            &__title {
-                font-size: 26px;
-            }
-            &__btn {
-                font-size: 26px;
-                padding: 17px 55px;
-            }
-        }
+        
     }
 }
 
 @media (max-width: 1170px) {
     .services {
         padding: 100px 0;
-         &__slider {
-            padding-top: 60px;
-         }
-        &__slide {
-            height: 780px;
-        }
-        .wrapper {
-            padding: 35px 20px;
-        }
-        .slide {
-            &__btn {
-                font-size: 26px;
-                padding: 16px 55px;
-            }
-        }
-
-        &__prev {
-            right: 45px;
-        }
-
-        &__next,
-        &__prev {
-            img {
-                height: 32px;
-            }
-        }
+         
     }
 }
 
 @media (max-width: 992px) {
     .services {
-         &__slider {
-            padding-top: 50px;
-         }
-        padding: 90px 0;
-        &__slide {
-            height: 760px;
-        }
-        .wrapper {
-            border: 4px solid $services;
-            padding: 30px 20px;
-        }
-        .slide {
-            &__title {
-                font-size: 24px;
-            }
-            &__btn {
-                font-size: 24px;
-                padding: 15px 55px;
-            }
-        }
-         .check {
-             gap: 10px;
-         }
-         .term {
-             font-size: 20px;
-         }
-
-         .add {
-             gap: 10px;
-
-             &__title {
-                 font-size: 20px;
-             }
-             &__descr {
-                 font-size: 14px;
-             }
-         }
-         .price {
-             font-size: 24px;
-         }
-         .slide__check {
-             &-descr {
-                 font-size: 14px;
-             }
-         }
-
-        &__next,
-        &__prev {
-            display: none;
-        }
+       
     }
 }
 
 @media (max-width: 768px) {
     .services {
         padding: 80px 0;
-        &__slide {
-            height: 750px;
-        }
-        .wrapper {
-            margin: 0 70px;
-            padding: 30px 20px;
-        }
+
     }
 }
 
 @media (max-width: 576px) {
     .services {
-        &__slider {
-            padding-bottom: 40px;
-        }
-        padding: 70px 0;
-        &__slide {
-            height: 710px;
-        }
-        .wrapper {
-            border: 3px solid $services;
-            padding: 25px 20px;
-            margin: 0;
-        }
-        .slide {
-            &__title {
-                font-size: 22px;
-            }
-            &__btn {
-                font-size: 22px;
-            }
-        }
-
-        .term {
-            font-size: 18px;
-        }
-
-        .add {
-            &__title {
-                font-size: 18px;
-            }
-        }
-
-        .price {
-            font-size: 22px;
-        }
+        
     }
 }
 
 @media (max-width: 480px) {
     .services {
-        &__slider {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        padding: 60px 0;
-
-        &__slide {
-            height: 680px;
-        }
-
-        .slide {
-            &__title {
-                font-size: 20px;
-            }
-
-            &__btn {
-                font-size: 20px;
-                padding: 15px 50px;
-            }
-        }
-        .price {
-            font-size: 20px;
-        }
-    }
-}
-
-@media (max-width: 360px) {
-    .services {
-        &__slide {
-            height: 750px;
-        }
+        
     }
 }

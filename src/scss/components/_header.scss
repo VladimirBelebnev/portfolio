@@ -115,7 +115,7 @@
         align-items: center;
     }
     &__item {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         color: $white;
         transition: color .3s;
@@ -164,11 +164,14 @@
         height: 110px;
         &__logo {
             img {
-                width: 232px;
+                width: 224px;
             }
         }
         .menu {
-            gap: 40px;
+            gap: 45px;
+            &__item {
+                font-size: 18px;
+            }
             &__github {
                 img {
                     width: 64px;
@@ -180,15 +183,16 @@
 
 @media (max-width: 1400px) {
     .header {
+        height: 100px;
         &__logo {
             img {
-                width: 212px;
+                width: 206px;
             }
         }
         .menu {
-            gap: 35px;
+            gap: 40px;
             &__item {
-                font-size: 18px;
+                font-size: 16px;
             }
             &__github {
                 img {
@@ -244,7 +248,7 @@
 
 @media (max-width: 576px) {
     .header {
-         height: 80px;
+        height: 80px;
         &__logo {
             img {
                 width: 176px;
@@ -255,9 +259,6 @@
         &__items {
             margin-top: 140px;
             gap: 40px;
-        }
-        &__item {
-            font-size: 18px;
         }
     }
 }

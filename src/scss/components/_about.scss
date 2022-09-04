@@ -47,17 +47,18 @@
 @media (max-width: 1680px) {
     .about {
         &__wrap {
-            gap: 90px;
+            gap: 60px;
         }
         &__photo {
-            max-width: 498px;
+            max-width: 476px;
         }
         &__descr {
-            max-width: 600px;
-            font-size: 22px;
+             padding-top: 20px;
+            max-width: 550px;
+            font-size: 20px;
         }
         .img__wrap::after {
-            top: 55px;
+            top: 45px;
             right: -40px;
             font-size: 32px;
         }
@@ -70,15 +71,10 @@
             gap: 60px;
         }
         &__photo {
-            max-width: 448px;
-        }
-        &__descr {
-            max-width: 550px;
-            padding-top: 20px;
-            font-size: 20px;
+            max-width: 424px;
         }
         .img__wrap::after {
-            top: 55px;
+            top: 35px;
             right: -40px;
             font-size: 28px;
         }

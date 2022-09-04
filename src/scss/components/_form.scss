@@ -144,6 +144,16 @@
         &__label {
             margin-top: 22px;
         }
+        &__radio {
+            .fake-radio {
+                width: 22px;
+                height: 22px;
+            }
+            .fake-radio::before {
+                width: 8px;
+                height: 8px;
+            }
+        }
         &__btn {
             margin-top: 25px;
             font-size: 24px;
@@ -155,7 +165,7 @@
 @media (max-width: 1400px) {
     .form {
         &__img {
-            max-height: 650px;
+            max-height: 600px;
         }
         &__form {
             max-width: 480px;
@@ -167,25 +177,18 @@
         }
         &__label {
             font-size: 18px;
-            margin-top: 20px;
+            margin-top: 18px;
         }
         &__input {
-            padding: 18px 25px;
+            padding: 16px 25px;
             font-size: 16px;
         }
         &__btn {
-            padding: 20px 0;
+            padding: 18px 0;
         }
         &__radio {
+            margin-top: 18px;
             font-size: 18px;
-            .fake-radio {
-                width: 20px;
-                height: 20px;
-            }
-            .fake-radio::before {
-                width: 8px;
-                height: 8px;
-            }
         }
     }
 }
@@ -200,6 +203,7 @@
         }
         .select::after {
             top: 35%;
+            right: 25px;
             width: 20px;
         }
     }
@@ -214,11 +218,23 @@
             font-size: 24px;
         }
         &__input {
-            padding: 18px 20px;
+            padding: 15px 20px;
         }
         &__btn {
+            margin-top: 20px;
             padding: 18px 0;
             font-size: 20px;
+        }
+        &__radio {
+            .fake-radio {
+                width: 18px;
+                height: 18px;
+            }
+
+            .fake-radio::before {
+                width: 6px;
+                height: 6px;
+            }
         }
     }
 }
@@ -226,12 +242,14 @@
 @media (max-width: 576px) {
     .form {
         &__form {
+            max-width: 400px;
             padding: 20px 25px;
         }
         &__input {
-            padding: 16px 18px;
+            padding: 15px 18px;
         }
         &__btn {
+            padding: 16px 0;
             font-size: 20px;
         }
         .select::after {

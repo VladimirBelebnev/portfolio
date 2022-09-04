@@ -25,6 +25,7 @@
         padding-top: 50px;
         max-width: 600px;
         font-weight: 400;
+        line-height: 125%;
         font-size: 28px;
         color: $dark;
     }
@@ -52,7 +53,7 @@
     }
     &__arrow {
         position: absolute;
-        bottom: 0%;
+        bottom: 5%;
         right: 8%;
         cursor: pointer;
         opacity: 1;
@@ -78,25 +79,25 @@
             padding-top: 190px;
         }
         &__img {
-            max-width: 550px;
+            max-width: 525px;
         }
         &__title {
-            font-size: 52px;
+            font-size: 48px;
         }
         &__descr {
-            padding-top: 45px;
-            font-size: 26px;
-            max-width: 500px;
+            padding-top: 40px;
+            font-size: 24px;
+            max-width: 450px;
         }
         &__btn {
             margin-top: 140px;
-            padding: 25px 60px;
+            padding: 22px 55px;
             >span {
-                 font-size: 26px;
+                 font-size: 24px;
             }
         }
         &__arrow {
-            bottom: 8%;
+            bottom: 6%;
             img {
                 width: 56px;
             }
@@ -116,24 +117,17 @@
              max-width: 500px;
          }
          &__title {
-             font-size: 48px;
-         }
-         &__descr {
-             padding-top: 40px;
-             font-size: 24px;
-             max-width: 450px;
+             font-size: 44px;
          }
 
          &__btn {
              margin-top: 120px;
-             font-size: 24px;
-             padding: 22px 55px;
              >span {
                  font-size: 24px;
              }
          }
         &__arrow {
-            bottom: 2%;
+            bottom: 4%;
             img {
                 width: 52px;
             }
@@ -143,7 +137,7 @@
 
 @media (max-width: 1170px) {
     .hero {
-       padding-bottom: 60px;
+       padding-bottom: 75px;
        background-size: 650px;
        background-position: right top 70px;
        .container {
@@ -153,19 +147,26 @@
            max-width: 450px;
        }
        &__title {
-           font-size: 44px;
+           font-size: 40px;
        }
        &__descr {
-            font-size: 22px;
-           max-width: 420px;
+           font-size: 20px;
+           max-width: 400px;
        }
 
        &__btn {
            margin-top: 120px;
            >span {
-               font-size: 22px;
+               font-size: 20px;
            }
            padding: 20px 50px;
+       }
+       &__arrow {
+           bottom: 2%;
+
+           img {
+               width: 52px;
+           }
        }
     }
 }
@@ -192,15 +193,6 @@
         &__img {
             max-width: 400px;
         }
-
-        &__title {
-            font-size: 44px;
-        }
-
-        &__descr {
-            font-size: 22px;
-            max-width: 420px;
-        }
         &__btn {
             margin-top: 90px;
         }
@@ -219,16 +211,12 @@
            padding-top: 160px;
            gap: 20px;
        }
-
+       &__descr {
+           font-size: 18px;
+           max-width: 350px;
+       }
        &__img {
            max-width: 360px;
-       }
-       &__title {
-           font-size: 40px;
-       }
-       &__descr {
-           font-size: 20px;
-           max-width: 380px;
        }
        &__btn {
           padding: 18px 45px;
@@ -254,10 +242,6 @@
         }
         &__title {
             font-size: 36px;
-        }
-        &__descr {
-            font-size: 18px;
-            max-width: 350px;
         }
     }
 }

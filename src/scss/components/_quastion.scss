@@ -1,5 +1,8 @@
 .quastion {
     padding: 160px 0;
+    .container {
+        max-width: 1400px;
+    }
     &__title {
         justify-content: center;
     }
@@ -8,6 +11,7 @@
     }
     &__block {
         box-sizing: border-box;
+        max-height: 180px;
         padding: 40px 20px;
         border-top: 2px solid #525252;
         transition: max-height 2s ease;
@@ -89,6 +93,9 @@
 
 @media (max-width: 1680px) {
     .quastion {
+        .container {
+            max-width: 1200px;
+        }
         padding: 140px 0;
         &__wrap {
             margin-top: 80px;
@@ -104,7 +111,8 @@
                 font-size: 28px;
             }
             &__text {
-                font-size: 22px;
+                padding-top: 30px;
+                font-size: 20px;
             }
         }
     }
@@ -113,6 +121,9 @@
 @media (max-width: 1400px) {
     .quastion {
         padding: 110px 0;
+        .container {
+            max-width: 1060px;
+        }
         &__wrap {
             margin-top: 70px;
         }
@@ -124,11 +135,10 @@
                 gap: 100px;
             }
             &__title {
-                font-size: 26px;
+                font-size: 24px;
             }
             &__text {
-                padding-top: 30px;
-                font-size: 20px;
+                font-size: 18px;
             }
             &__btn {
                 width: 35px;
@@ -150,12 +160,6 @@
         .block {
             &__header {
                 gap: 70px;
-            }
-            &__title {
-                font-size: 24px;
-            }
-            &__text {
-                font-size: 18px;
             }
         }
     }
@@ -179,7 +183,6 @@
             }
             &__text {
                 padding-top: 25px;
-                font-size: 18px;
             }
             &__btn {
                 width: 30px;
