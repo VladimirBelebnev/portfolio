@@ -189,7 +189,7 @@
         .circle-red {
             display: block;
             position: absolute;
-            bottom: -50%;
+            bottom: -30%;
             z-index: -1;
             max-width: 350px;
         }
@@ -197,7 +197,7 @@
             display: block;
             position: absolute;
             right: 30px;
-            top: -20%;
+            top: 0%;
             z-index: -1;
             max-width: 212px;
         }
@@ -249,12 +249,12 @@
     .services {
         padding: 80px 0;
         .circle-red {
-            bottom: -80%;
+            bottom: -50%;
             max-width: 300px;
         }
 
         .circle-orange {
-            top: -50%;
+            top: -10%;
             right: 20px;
             max-width: 156px;
         }
@@ -284,7 +284,7 @@
     .services {
         padding: 70px 0;
         .circle-red {
-            bottom: -70%;
+            display: none;
         }
         .circle-orange {
             display: none;
@@ -298,7 +298,24 @@
         &__header {
             font-size: 22px;
         }
+        &__check {
+            border-top: 2px solid rgba(153, 153, 153, 0.5);
+        }
 
+        &__check:last-child {
+            border-top: 2px solid rgba(153, 153, 153, 0.5);
+            border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+        }
+        &__card:nth-child(2) {
+            .services__check {
+                border-top: 2px solid rgba(153, 153, 153, 0.5);
+            }
+
+            .services__check:last-child {
+                border-top: 2px solid rgba(153, 153, 153, 0.5);
+                border-bottom: 2px solid rgba(153, 153, 153, 0.5);
+            }
+        }
         &__price {
             font-size: 24px;
 
@@ -315,13 +332,6 @@
 
 @media (max-width: 480px) {
     .services {
-        .circle-red {
-            max-width: 250px;
-            bottom: -65%;
-        }
         padding: 60px 0;
-        &__card {
-            height: 450px;
-        }
     }
 }
