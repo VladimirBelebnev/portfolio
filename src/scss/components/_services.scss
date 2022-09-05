@@ -3,50 +3,325 @@
     &__title {
         justify-content: center;
     }
+    &__cards {
+        padding-top: 120px;
+        display: flex;
+        gap: 0;
+        justify-content: center;
+    }
+    &__card {
+        background: $white;
+        box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.13);
+        border-radius: 15px;
+        padding: 50px;
+        box-sizing: border-box;
+        max-width: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 750px;
+    }
+    &__card:nth-child(2) {
+        transform: scale(1.1);
+        background: $white;
+        background: linear-gradient(328.73deg, #C30019 30.01%, rgba(255, 44, 71, 0.99) 97.74%);
+        h4, p {
+            color: $white;
+        }
+        button {
+            background: $white;
+            color: $red;
+        }
+        button:hover {
+           background: #F8F8F8;
+        }
+        .services__check {
+            border-top: 3px solid rgba(255, 255, 255, 0.7);
+        }
+        .services__check:last-child {
+            border-top: 3px solid rgba(255, 255, 255, 0.7);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+        }
+    }
+    &__header {
+        text-align: center;
+        font-weight: 500;
+        font-size: 32px;
+        color: #000;
+    }
+    &__price {
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+        color: #000;
+        span {
+            font-size: 36px;
+        }
+    }
+    &__check {
+        border-top: 3px solid rgba(153, 153, 153, 0.5);
+        padding: 20px 0;
+        font-size: 20px;
+        color: $text;
+        text-align: center;
+    }
+    &__check:last-child {
+        border-top: 3px solid rgba(153, 153, 153, 0.5);
+        border-bottom: 3px solid rgba(153, 153, 153, 0.5);
+    }
+    &__btn {
+        border: none;
+        background: linear-gradient(282.26deg, #CC0721 21.08%, #FC2C46 112.34%);
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 28px;
+        color: $white;
+        padding: 24px 80px;
+        cursor: pointer;
+        transition: background .3s;
+    }
+    &__btn:hover {
+        background: linear-gradient(273.66deg, #AF031A 5.83%, #FC2C46 126.9%);
+    }
+    .circle-red {
+        display: none;
+    }
+    .circle-orange {
+        display: none;
+    }
 }
 
 @media (max-width: 1680px) {
     .services {
         padding: 140px 0;
-        
+        &__cards {
+            padding-top: 100px;
+        }
+        &__card {
+            padding: 45px;
+            max-width: 400px;
+            height: 675px;
+        }
+        &__header {
+            font-size: 28px;
+        }
+
+        &__price {
+            font-size: 36px;
+            span {
+                font-size: 32px;
+            }
+        }
+        &__check {
+            padding: 18px 0;
+            font-size: 18px;
+        }
+        &__btn {
+            font-size: 24px;
+            padding: 22px 75px;
+        }
     }
 }
 
 @media (max-width: 1400px) {
     .services {
         padding: 110px 0;
-        
+        &__cards {
+            padding-top: 90px;
+        }
+        &__card {
+            padding: 40px;
+            height: 600px;
+            max-width: 380px;
+        }
+        &__header {
+            font-size: 26px;
+        }
+        &__price {
+            font-size: 34px;
+            span {
+                font-size: 30px;
+            }
+        }
+        &__check {
+            padding: 16px 0;
+            font-size: 16px;
+        }
+        &__btn {
+            font-size: 22px;
+            padding: 20px;
+            width: 100%;
+        }
     }
 }
 
 @media (max-width: 1170px) {
     .services {
         padding: 100px 0;
-         
+         &__card {
+             height: 575px;
+             max-width: 370px;
+         }
+         &__header {
+             font-size: 24px;
+         }
+         &__price {
+             font-size: 32px;
+             span {
+                 font-size: 28px;
+             }
+         }
+         &__check {
+             padding: 15px 0;
+             font-size: 15px;
+         }
+         &__btn {
+             font-size: 20px;
+             padding: 18px;
+             width: 100%;
+         }
     }
 }
 
 @media (max-width: 992px) {
     .services {
-       
+        position: relative;
+        .circle-red {
+            display: block;
+            position: absolute;
+            bottom: -50%;
+            z-index: -1;
+            max-width: 350px;
+        }
+        .circle-orange {
+            display: block;
+            position: absolute;
+            right: 30px;
+            top: -20%;
+            z-index: -1;
+            max-width: 212px;
+        }
+        &__check {
+            padding: 16px 0;
+            font-size: 16px;
+        }
+       &__cards {
+           padding-top: 60px;
+           gap: 25px;
+           flex-direction: column;
+           align-items: center;
+       }
+       &__card {
+           max-width: 100%;
+           height: 525px;
+       }
+       &__card:nth-child(2) {
+          transform: scale(1);
+          order: -1;
+          background: $white;
+           h4,
+           p {
+               color: inherit;
+           }
+
+           button {
+               background: linear-gradient(282.26deg, #CC0721 21.08%, #FC2C46 112.34%);
+               color: $white;
+           }
+
+           button:hover {
+               background: linear-gradient(273.66deg, #AF031A 5.83%, #FC2C46 126.9%);
+           }
+
+           .services__check {
+               border-top: 3px solid rgba(153, 153, 153, 0.5);
+           }
+
+           .services__check:last-child {
+               border-top: 3px solid rgba(153, 153, 153, 0.5);
+               border-bottom: 3px solid rgba(153, 153, 153, 0.5);
+           }
+       }
     }
 }
 
 @media (max-width: 768px) {
     .services {
         padding: 80px 0;
+        .circle-red {
+            bottom: -80%;
+            max-width: 300px;
+        }
 
+        .circle-orange {
+            top: -50%;
+            right: 20px;
+            max-width: 156px;
+        }
+
+        &__cards {
+            padding-top: 50px;
+            gap: 20px;
+        }
+        &__card {
+            max-width: 100%;
+            height: 480px;
+        }
+        &__price {
+            font-size: 28px;
+            span {
+                font-size: 24px;
+            }
+        }
+        &__btn {
+            font-size: 18px;
+            padding: 16px;
+        }
     }
 }
 
 @media (max-width: 576px) {
     .services {
-        
+        padding: 70px 0;
+        .circle-red {
+            bottom: -70%;
+        }
+        .circle-orange {
+            display: none;
+        }
+        &__cards {
+            padding-top: 40px;
+        }
+        &__card {
+            padding: 30px;
+        }
+        &__header {
+            font-size: 22px;
+        }
+
+        &__price {
+            font-size: 24px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+        &__check {
+            padding: 15px 0;
+            font-size: 15px;
+        }
     }
 }
 
 @media (max-width: 480px) {
     .services {
-        
+        .circle-red {
+            max-width: 250px;
+            bottom: -65%;
+        }
+        padding: 60px 0;
+        &__card {
+            height: 450px;
+        }
     }
 }
