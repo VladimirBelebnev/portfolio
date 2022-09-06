@@ -1612,7 +1612,7 @@ a {
   font-weight: 700;
   font-size: 40px;
   text-align: center;
-  color: #000;
+  color: #DA142E;
 }
 .services__price span {
   font-size: 36px;
@@ -1792,6 +1792,9 @@ a {
 .services__card:nth-child(2) p {
     color: inherit;
   }
+  .services__card:nth-child(2) .services__price {
+    color: #DA142E;
+  }
   .services__card:nth-child(2) button {
     background: -o-linear-gradient(167.74deg, #CC0721 21.08%, #FC2C46 112.34%);
     background: linear-gradient(282.26deg, #CC0721 21.08%, #FC2C46 112.34%);
@@ -1875,10 +1878,10 @@ a {
     border-bottom: 2px solid rgba(153, 153, 153, 0.5);
   }
   .services__price {
-    font-size: 24px;
+    font-size: 26px;
   }
   .services__price span {
-    font-size: 20px;
+    font-size: 22px;
   }
   .services__check {
     padding: 15px 0;
@@ -1888,6 +1891,11 @@ a {
 @media (max-width: 480px) {
   .services {
     padding: 60px 0;
+  }
+  .services__title {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 .form {
@@ -2003,8 +2011,8 @@ a {
 .form__radio .fake-radio {
   cursor: pointer;
   border: 2px solid #EF3333;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;

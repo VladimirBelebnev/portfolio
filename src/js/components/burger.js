@@ -1,6 +1,7 @@
 const burger = () => {
     const burger = document.querySelector('.burger'),
-        mobileMenu = document.querySelector('.mobile');
+          mobileMenu = document.querySelector('.mobile'),
+          mobileLink = document.querySelectorAll('.mobile__item')
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
@@ -14,6 +15,14 @@ const burger = () => {
             mobileMenu.classList.add('hidden');
             document.body.classList.remove('overflow');
         }
+    });
+
+    mobileLink.forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.add('hidden');
+            document.body.classList.remove('overflow');
+        });
     });
 };
 

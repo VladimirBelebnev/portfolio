@@ -9,10 +9,10 @@
     <title>Веб–разработка</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container">
 			<div class="header__wrap">
-				<a class="header__logo" href="#hero">
+				<a class="header__logo link" href="#hero">
 					<img src="./img/logo.webp" alt="logo">
 				</a>
 				<button class="burger">
@@ -21,11 +21,11 @@
 					<span class="burger-line bottom-line"></span>
 				</button>
 				<ul class="menu">
-					<li class="menu__item"><a href="#">Обо мне</a></li>
-					<li class="menu__item"><a href="#">Мои работы</a></li>
-					<li class="menu__item"><a href="#">Услуги</a></li>
-					<li class="menu__item"><a href="#">Отзывы</a></li>
-					<li class="menu__item"><a href="#">Q&A</a></li>
+					<li class="menu__item"><a class="link" href="#about">Обо мне</a></li>
+					<li class="menu__item"><a class="link" href="#works">Мои работы</a></li>
+					<li class="menu__item"><a class="link" href="#services">Услуги</a></li>
+					<li class="menu__item"><a class="link" href="#form">Связаться</a></li>
+					<li class="menu__item"><a class="link" href="#quastion">Q&A</a></li>
 					<li class="menu__item none">
 						<a target="_blank" class="menu__github" href="https://github.com/VladimirBelebnev">
 							<img src="./img/svg/github.svg" alt="github logo">
@@ -38,12 +38,11 @@
 
 	<div class="mobile hidden">
 		<ul class="mobile__items">
-			<li class="mobile__item"><a href="#">Обо мне</a></li>
-			<li class="mobile__item"><a href="#">Мои услуги</a></li>
-			<li class="mobile__item"><a href="#">Мои работы</a></li>
-			<li class="mobile__item"><a href="#">Этапы работы</a></li>
-			<li class="mobile__item"><a href="#">Заказать</a></li>
-			<li class="mobile__item"><a href="#">Часто задаваемые вопросы</a></li>
+			<li class="mobile__item"><a class="link" href="#about">Обо мне</a></li>
+			<li class="mobile__item"><a class="link" href="#works">Мои работы</a></li>
+			<li class="mobile__item"><a class="link" href="#services">Услуги</a></li>
+			<li class="mobile__item"><a class="link" href="#form">Связаться</a></li>
+			<li class="mobile__item"><a class="link" href="#quastion">Часто задаваемые вопросы</a></li>
 		</ul>
 		<div class="mobile__contact">
 			<a href="#"><img class="mobile__icon" src="./img/svg/vk.svg" alt="vk logo"></a>
@@ -53,7 +52,7 @@
 		</div>
 	</div>
 
-	<section class="hero">
+	<section class="hero" id="hero">
 		<div class="container">
 			<div class="hero__wrap">
 				<h1 class="hero__title">САЙТ ДЛЯ ВАС<br>И ВАШЕГО БИЗНЕСА</h1>
@@ -65,12 +64,12 @@
 				<img src="./img/hero-img.webp" alt="hero section image" class="hero__img">
 			</div>
 		</div>
-		<a href="#about" class="hero__arrow">
+		<a href="#about" class="hero__arrow link">
 			<img src="./img/svg/arrow.svg" alt="arrow down">
 		</a>
 	</section>
 
-	<section class="skills">
+	<section class="skills" id="skills">
 		<div class="skills__row marquee-left">
 			<div class="skills__marquee">
 				<img src="./img/svg/php.svg" alt="php icon" class="skills__item">
@@ -160,7 +159,7 @@
 		</div>
 	</section>
 
-	<section class="works">
+	<section class="works" id="works">
 		<div class="container">
 			<h2 class="title works__title">МОИ РАБОТЫ</h2>
 			<div class="works__items">
@@ -207,7 +206,7 @@
 		</div>
 	</section>
 
-	<section class="step">
+	<section class="step" id="step">
 		<div class="container">
 			<h2 class="title step__title">ЭТАПЫ РАБОТЫ</h2>
 			<div class="step__wrap">
@@ -249,7 +248,7 @@
 		</div>
 	</section>
 
-	<section class="services">
+	<section class="services" id="services">
 		<div class="container">
 			<h2 class="title services__title">УСЛУГИ</h2>
 			<div class="services__cards">
@@ -258,9 +257,9 @@
 						сайт</h4>
 					<p class="services__price"><span>от</span> 17999₽</p>
 					<div class="services__wrap">
+						<p class="services__check">Соверменный дизайн</p>
 						<p class="services__check">Адаптация под размер разных устройств</p>
-						<p class="services__check">Высокая скорость работы</p>
-						<p class="services__check">Формы обратной связи</p>
+						<p class="services__check">Интернет магазин или новостной портал</p>
 						<p class="services__check">Администартивная панель Wordpress</p>
 					</div>
 					<button class="services__btn">Заказать</button>
@@ -281,12 +280,12 @@
 
 				<div class="services__card">
 					<h4 class="services__header">Другое</h4>
-					<p class="services__price"><span>от</span> 17999₽</p>
+					<p class="services__price"><span>от</span> Задачи</p>
 					<div class="services__wrap">
-						<p class="services__check">Адаптация под размер разных устройств</p>
-						<p class="services__check">Высокая скорость работы</p>
-						<p class="services__check">Формы обратной связи</p>
-						<p class="services__check">Администартивная панель Wordpress</p>
+						<p class="services__check">Доработки на имеющемся сайте</p>
+						<p class="services__check">Добавление функционала</p>
+						<p class="services__check">Подлючение администативной панели</p>
+						<p class="services__check">Редизайн и обновеление сайта</p>
 					</div>
 					<button class="services__btn">Заказать</button>
 				</div>
@@ -296,14 +295,14 @@
 		<img class="circle-orange rellax" data-rellax-speed="-2" src="./img/services-mini-circle.png" alt="circle">
 	</section>
 
-	<section class="form">
+	<section class="form" id="form">
 		<div class="container">
 			<form action="#" class="form__form">
 				<h3 class="form__title">Оставить заявку</h3>
 				<label class="form__label" for="form-name">Ваше имя</label>
-				<input class="form__input" id="form-name" type="text" placeholder="Введите имя">
+				<input class="form__input" id="form-name" type="text" name="text" placeholder="Введите имя">
 				<label class="form__label" for="form-tel">Ваш телефон</label>
-				<input class="form__input" id="form-tel" type="tel" placeholder="Введите номер телефона">
+				<input class="form__input" id="form-tel" type="tel" name="phone" placeholder="Введите номер телефона">
 				<label class="form__label" for="form-contact">Как с вами связаться?</label>
 				<div class="select">
 					<select class="form__input" id="form-contact">
@@ -336,7 +335,7 @@
 		</div>
 	</section>
 
-	<section class="quastion">
+	<section class="quastion" id="quastion">
 		<div class="container">
 			<h2 class="title quastion__title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
 			<div class="quastion__wrap">
@@ -448,7 +447,7 @@
 						</div>
 					</div>
 					<div class="contact__block hiddenWithMobile">
-						<a href="#">
+						<a href="#hero" class="link">
 							<img class="contact__logo" src="./img/logo-small.png" alt="logo">
 						</a>
 						<span class="contact__line"></span>
@@ -458,18 +457,18 @@
 				<div class="footer__menu">
 					<h3 class="menu__title">Разделы</h3>
 					<ul class="menu__items">
-						<li><a class="menu__item" href="#">Обо мне</a></li>
-						<li><a class="menu__item" href="#">Мои работы</a></li>
-						<li><a class="menu__item" href="#">Услуги</a></li>
-						<li><a class="menu__item" href="#">Отзывы</a></li>
-						<li><a class="menu__item" href="#">Часто задаваемые вопросы</a></li>
+						<li><a class="menu__item link" href="#about">Обо мне</a></li>
+						<li><a class="menu__item link" href="#works">Мои работы</a></li>
+						<li><a class="menu__item link" href="#services">Услуги</a></li>
+						<li><a class="menu__item link" href="#form">Связаться</a></li>
+						<li><a class="menu__item link" href="#quastion">Часто задаваемые вопросы</a></li>
 					</ul>
 				</div>
 				<div class="footer__img">
 					<img src="./img/footer-img.png" alt="footer section image">
 				</div>
 				<div class="contact__block showWithMobile">
-					<a href="#">
+					<a href="#hero" class="link">
 						<img class="contact__logo" src="./img/logo-small.png" alt="logo">
 					</a>
 					<span class="contact__line"></span>
