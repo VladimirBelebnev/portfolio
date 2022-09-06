@@ -255,21 +255,21 @@ const easyScrolling = () => {
       if (section.classList.contains('about') || section.classList.contains('form')) {
         (0,seamless_scroll_polyfill__WEBPACK_IMPORTED_MODULE_0__.scrollIntoView)(section, {
           behavior: "smooth",
-          block: "center",
-          inline: "center"
+          block: "center"
         });
       } else {
         (0,seamless_scroll_polyfill__WEBPACK_IMPORTED_MODULE_0__.scrollIntoView)(section, {
           behavior: "smooth",
-          block: "start",
-          inline: "start"
+          block: "start"
         });
       }
     });
   });
 };
 
-easyScrolling();
+window.addEventListener('DOMContentLoaded', () => {
+  easyScrolling();
+});
 
 /***/ }),
 

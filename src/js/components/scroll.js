@@ -14,17 +14,17 @@ const easyScrolling = () => {
                 scrollIntoView(section, {
                     behavior: "smooth",
                     block: "center",
-                    inline: "center",
                 });
             } else {
                 scrollIntoView(section, {
                     behavior: "smooth",
                     block: "start",
-                    inline: "start",
                 });
             }
         });
     });
 };
 
-easyScrolling();
+window.addEventListener('DOMContentLoaded', () => {
+    easyScrolling();
+});
