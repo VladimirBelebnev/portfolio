@@ -26,5 +26,6 @@ const easyScrolling = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+
     easyScrolling();
 });

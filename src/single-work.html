@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/vendor.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Веб–разработка</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <a class="header__logo" href="./index.html">
+                        <img src="./img/logo.webp" alt="logo">
+                    </a>
+                    <button class="burger">
+                        <span class="burger-line top-line"></span>
+                        <span class="burger-line mid-line"></span>
+                        <span class="burger-line bottom-line"></span>
+                    </button>
+                    <ul class="menu">
+                        <li class="menu__item"><a class="link" href="#about">Обо мне</a></li>
+                        <li class="menu__item"><a class="link" href="#works">Мои работы</a></li>
+                        <li class="menu__item"><a class="link" href="#services">Услуги</a></li>
+                        <li class="menu__item"><a class="link" href="#form">Связаться</a></li>
+                        <li class="menu__item"><a class="link" href="#quastion">Q&A</a></li>
+                        <li class="menu__item none">
+                            <a target="_blank" class="menu__github" href="https://github.com/VladimirBelebnev">
+                                <img src="./img/svg/github.svg" alt="github logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile hidden">
+            <ul class="mobile__items">
+                <li class="mobile__item"><a class="link" href="#about">Обо мне</a></li>
+                <li class="mobile__item"><a class="link" href="#works">Мои работы</a></li>
+                <li class="mobile__item"><a class="link" href="#services">Услуги</a></li>
+                <li class="mobile__item"><a class="link" href="#form">Связаться</a></li>
+                <li class="mobile__item"><a class="link" href="#quastion">Часто задаваемые вопросы</a></li>
+            </ul>
+            <div class="mobile__contact">
+                <a href="#"><img class="mobile__icon" src="./img/svg/vk.svg" alt="vk logo"></a>
+                <a href="#"><img class="mobile__icon" src="./img/svg/whatsApp.svg" alt="whatsApp logo"></a>
+                <a href="#"><img class="mobile__icon" src="./img/svg/telegram.svg" alt="telegram logo"></a>
+                <a href="#"><img class="mobile__icon" src="./img/svg/mail.svg" alt="mail logo"></a>
+            </div>
+        </div>
+
+        <section class="works works__section single-work">
+            <div class="container">
+                <div class="single-work__header">
+                    <div class="single-work__type">Новостной портал</div>
+                    <h1 class="hero__title single-work__title">Федерация футбола</h1>
+                    <p class="single-work__subtitle">Федерация футбола города–курорта Геленджик</p>
+                </div>
+            </div>
+            <img class="single-work__photo" src="./img/ffgel.webp" alt="ffgel.ru">
+            <div class="container">
+                <div class="single-work__content">
+                    <p class="single-work__descr">Однозначно, некоторые особенности внутренней политики неоднозначны и будут ограничены
+                        исключительно образом мышления.
+                        Предварительные выводы неутешительны: выбранный нами инновационный путь не даёт нам иного выбора, кроме
+                        определения
+                        приоретизации разума над эмоциями. Но новая модель организационной деятельности в значительной степени
+                        обусловливает
+                        важность своевременного выполнения сверхзадачи.</p>
+                    <div class="link__wrap">
+                        <a href="ffgel.ru" class="single-work__link">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img__wrap">
+                <img class="single-work__mobile" src="./img/ffgel-mobile.webp" alt="ffgel.ru mobile">
+            </div>
+            <div class="container">
+                <div class="single-work__review review">
+                    <img class="review__photo" src="./img/person.png" alt="person photo">
+                    <div class="review__info">
+                        <p class="review__name">Петр Петров</p>
+                        <p class="review__post">Менеджер Федерации футбола</p>
+                        <p class="review__text">“Однозначно, некоторые особенности внутренней политики неоднозначны и будут
+                            ограничены исключительно образом мышления.
+                            Предварительные выводы неутешительны”</p>
+                    </div>
+                </div>
+               <div class="question__wrap">
+                    <p class="single-work__question">Хочешь так же?</p>
+                    <button class="single-work__btn modal-order__trigger">Оставить заявку</button>
+               </div>
+            </div>
+        </section>
+
+        <div class="modal-order hidden" data-modal>
+            <div class="modal-order__dialog">
+                <div class="modal-order__content">
+                    <button class="modal-order__close">&times;</button>
+                    <form action="#" class="form__form modal-order__form">
+                        <h3 class="form__title modal-order__title">Оставить заявку</h3>
+                        <label class="form__label modal-order__label" for="modal-form-name">Ваше имя</label>
+                        <input class="form__input modal-order__input" id="modal-form-name" type="text" name="text"
+                            placeholder="Введите имя">
+                        <label class="form__label modal-order__label" for="modal-form-tel">Ваш телефон</label>
+                        <input class="form__input modal-order__input" id="modal-form-tel" type="tel" name="phone"
+                            placeholder="Введите номер телефона">
+                        <label class="form__label modal-order__label" for="modal-contact">Как с вами связаться?</label>
+                        <div class="select">
+                            <select class="form__input modal-order__input" id="modal-contact">
+                                <option value="1" selected="selected">Выберите способ связи</option>
+                                <option value="2">WhatsApp</option>
+                                <option value="3">Telegram</option>
+                                <option value="4">Телефон</option>
+                            </select>
+                        </div>
+                        <p>
+                            <label class="form__radio modal-order__radio" for="modal-landing-page">
+                                <input class="radio" id="modal-landing-page" type="radio" name="type"
+                                    value="landing-page">
+                                <span class="fake-radio"></span>
+                                Одностраничный сайт
+                            </label>
+                            <label class="form__radio modal-order__radio" for="modal-multi-page">
+                                <input class="radio" id="modal-multi-page" type="radio" name="type" value="multi-page">
+                                <span class="fake-radio"></span>
+                                Многостраничный сайт
+                            </label>
+                            <label class="form__radio modal-order__radio" for="modal-another">
+                                <input class="radio" id="modal-another" type="radio" name="type" value="another">
+                                <span class="fake-radio"></span>
+                                Другое
+                            </label>
+                        </p>
+                        <button class="form__btn modal-order__btn">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__contact">
+                        <div class="contact__block">
+                            <h3 class="contact__title">САЙТ ДЛЯ ВАС<br>
+                                И ВАШЕГО БИЗНЕСА</h3>
+                            <div class="contact__wrap">
+                                <a class="contact__link" href="#"><img src="./img/svg/vk.svg" alt="vk logo"></a>
+                                <a class="contact__link" href="#"><img src="./img/svg/whatsApp.svg"
+                                        alt="whatsApp logo"></a>
+                                <a class="contact__link" href="#"><img src="./img/svg/telegram.svg"
+                                        alt="telegram logo"></a>
+                                <a class="contact__link" href="#"><img src="./img/svg/mail.svg" alt="mail logo"></a>
+                            </div>
+                        </div>
+                        <div class="contact__block hiddenWithMobile">
+                            <a href="#hero" class="link">
+                                <img class="contact__logo" src="./img/logo-small.png" alt="logo">
+                            </a>
+                            <span class="contact__line"></span>
+                            <p class="contact__original">© 2022 Belebnev, Inc.</p>
+                        </div>
+                    </div>
+                    <div class="footer__menu">
+                        <h3 class="menu__title">Разделы</h3>
+                        <ul class="menu__items">
+                            <li><a class="menu__item link" href="#about">Обо мне</a></li>
+                            <li><a class="menu__item link" href="#works">Мои работы</a></li>
+                            <li><a class="menu__item link" href="#services">Услуги</a></li>
+                            <li><a class="menu__item link" href="#form">Связаться</a></li>
+                            <li><a class="menu__item link" href="#quastion">Часто задаваемые вопросы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__img">
+                        <img src="./img/footer-img.png" alt="footer section image">
+                    </div>
+                    <div class="contact__block showWithMobile">
+                        <a href="#hero" class="link">
+                            <img class="contact__logo" src="./img/logo-small.png" alt="logo">
+                        </a>
+                        <span class="contact__line"></span>
+                        <p class="contact__original">© 2022 Belebnev, Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/main.js" defer></script>
+    </body>
+
+</html>

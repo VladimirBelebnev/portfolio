@@ -12,5 +12,9 @@ function marquee(selector, speed, sign) {
     }, 0);
 }
 
-window.addEventListener('load', marquee('.marquee-left', 0.2, '-'));
-window.addEventListener('load', marquee('.marquee-right', 0.2, '+'));
+try {
+    window.addEventListener('load', marquee('.marquee-left', 0.2, '-'));
+    window.addEventListener('load', marquee('.marquee-right', 0.2, '+'));
+} catch (error) {
+    console.log(error);
+}

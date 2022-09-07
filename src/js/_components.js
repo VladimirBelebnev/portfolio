@@ -5,3 +5,4 @@ import "./components/heroBtn";
 import "./components/rellax";
 import "./components/scroll";
 import "./components/formMask";
+import "./components/modal";

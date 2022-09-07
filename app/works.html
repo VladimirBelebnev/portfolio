@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/vendor.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Веб–разработка</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <a class="header__logo" href="./index.html">
+                        <img src="./img/logo.webp" alt="logo">
+                    </a>
+                    <button class="burger">
+                        <span class="burger-line top-line"></span>
+                        <span class="burger-line mid-line"></span>
+                        <span class="burger-line bottom-line"></span>
+                    </button>
+                    <ul class="menu">
+                        <li class="menu__item"><a class="link" href="#about">Обо мне</a></li>
+                        <li class="menu__item"><a class="link" href="#works">Мои работы</a></li>
+                        <li class="menu__item"><a class="link" href="#services">Услуги</a></li>
+                        <li class="menu__item"><a class="link" href="#form">Связаться</a></li>
+                        <li class="menu__item"><a class="link" href="#quastion">Q&A</a></li>
+                        <li class="menu__item none">
+                            <a target="_blank" class="menu__github" href="https://github.com/VladimirBelebnev">
+                                <img src="./img/svg/github.svg" alt="github logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile hidden">
+            <ul class="mobile__items">
+                <li class="mobile__item"><a class="link" href="#about">Обо мне</a></li>
+                <li class="mobile__item"><a class="link" href="#works">Мои работы</a></li>
+                <li class="mobile__item"><a class="link" href="#services">Услуги</a></li>
+                <li class="mobile__item"><a class="link" href="#form">Связаться</a></li>
+                <li class="mobile__item"><a class="link" href="#quastion">Часто задаваемые вопросы</a></li>
+            </ul>
+            <div class="mobile__contact">
+                <a href="#"><img class="mobile__icon" src="./img/svg/vk.svg" alt="vk logo"></a>
+                <a href="#"><img class="mobile__icon" src="./img/svg/whatsApp.svg" alt="whatsApp logo"></a>
+                <a href="#"><img class="mobile__icon" src="./img/svg/telegram.svg" alt="telegram logo"></a>
+                <a href="#"><img class="mobile__icon" src="./img/svg/mail.svg" alt="mail logo"></a>
+            </div>
+        </div>
+
+        <section class="works works__section" id="works">
+            <div class="container">
+                <h1 class="title hero__title works__title works-section__title">МОИ РАБОТЫ</h1>
+                <div class="works__items">
+                    <a href="./single-work.html" class="works__item item">
+                        <img class="item__img" src="./img/ffgel.webp" alt="ffgel.ru">
+                        <div class="item__descr">
+                            <div class="item__wrap">
+                                <p class="item__name">Федерация футбола Геленджика</p>
+                                <p class="item__type">Новостной портал</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./single-work.html" class="works__item item">
+                        <img class="item__img" src="./img/invaxxi.webp" alt="invaxxi.ru">
+                        <div class="item__descr">
+                            <div class="item__wrap">
+                                <p class="item__name">Инициатива-XXI</p>
+                                <p class="item__type">Сайт компании</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./single-work.html" class="works__item item">
+                        <img class="item__img" src="./img/gelentour.webp" alt="gelentour.ru">
+                        <div class="item__descr">
+                            <div class="item__wrap">
+                                <p class="item__name">Гелентур</p>
+                                <p class="item__type">Сайт компании</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./single-work.html" class="works__item item">
+                        <img class="item__img" src="./img/portret.webp" alt="portret.ru">
+                        <div class="item__descr">
+                            <div class="item__wrap">
+                                <p class="item__name">Картины.art</p>
+                                <p class="item__type">Сайт компании</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__contact">
+                        <div class="contact__block">
+                            <h3 class="contact__title">САЙТ ДЛЯ ВАС<br>
+                                И ВАШЕГО БИЗНЕСА</h3>
+                            <div class="contact__wrap">
+                                <a class="contact__link" href="#"><img src="./img/svg/vk.svg" alt="vk logo"></a>
+                                <a class="contact__link" href="#"><img src="./img/svg/whatsApp.svg"
+                                        alt="whatsApp logo"></a>
+                                <a class="contact__link" href="#"><img src="./img/svg/telegram.svg"
+                                        alt="telegram logo"></a>
+                                <a class="contact__link" href="#"><img src="./img/svg/mail.svg" alt="mail logo"></a>
+                            </div>
+                        </div>
+                        <div class="contact__block hiddenWithMobile">
+                            <a href="#hero" class="link">
+                                <img class="contact__logo" src="./img/logo-small.png" alt="logo">
+                            </a>
+                            <span class="contact__line"></span>
+                            <p class="contact__original">© 2022 Belebnev, Inc.</p>
+                        </div>
+                    </div>
+                    <div class="footer__menu">
+                        <h3 class="menu__title">Разделы</h3>
+                        <ul class="menu__items">
+                            <li><a class="menu__item link" href="#about">Обо мне</a></li>
+                            <li><a class="menu__item link" href="#works">Мои работы</a></li>
+                            <li><a class="menu__item link" href="#services">Услуги</a></li>
+                            <li><a class="menu__item link" href="#form">Связаться</a></li>
+                            <li><a class="menu__item link" href="#quastion">Часто задаваемые вопросы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__img">
+                        <img src="./img/footer-img.png" alt="footer section image">
+                    </div>
+                    <div class="contact__block showWithMobile">
+                        <a href="#hero" class="link">
+                            <img class="contact__logo" src="./img/logo-small.png" alt="logo">
+                        </a>
+                        <span class="contact__line"></span>
+                        <p class="contact__original">© 2022 Belebnev, Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/main.js" defer></script>
+    </body>
+</html>

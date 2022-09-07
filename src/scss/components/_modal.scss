@@ -1,0 +1,197 @@
+.modal-order {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    &__dialog {
+        max-width: 500px;
+        margin: 60px auto
+    }
+    &__content {
+        position: relative;
+        margin: 0 15px;
+    }
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 40px;
+        color: #000;
+        opacity: .7;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: opacity .3s;
+    }
+    &__close:hover {
+        opacity: 0.5;
+    }
+    &__form {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, .2);
+        max-height: 85vh;
+        overflow-y: auto;
+        margin: 0;
+        max-width: 100%;
+    }
+    &__title {
+        font-size: 32px;
+    }
+    &__input {
+        font-size: 16px;
+        padding: 20px 30px;
+    }
+    &__btn {
+        margin-top: 24px;
+        font-size: 24px;
+        padding: 20px;
+    }
+    &__label {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .fake-radio {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .select {
+        position: relative;
+    }
+    .select::after {
+        content: url('data:image/svg+xml; base64, PHN2ZyB2aWV3Qm94PSIwIDAgMjkgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMMTQuNSAxNC41TDI4IDEiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=');
+        position: absolute;
+        pointer-events: none;
+        cursor: pointer;
+        width: 25px;
+        right: 30px;
+        top: 40%;
+    }
+}
+
+.modal-question {
+    &__textarea {
+        height: 100px;
+    }
+}
+
+.hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+@media (max-width: 1400px) {
+    .modal-order {
+        &__dialog {
+            max-width: 480px;
+        }
+        &__title {
+            font-size: 28px;
+        }
+        &__input {
+            padding: 15px 25px;
+        }
+        &__btn {
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 18px;
+        }
+        &__label {
+            margin-top: 16px;
+        }
+        .form__radio {
+            margin-top: 16px;
+        }
+        .select::after {
+            right: 25px;
+            top: 38%;
+            width: 22px;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .modal-order {
+        &__dialog {
+            max-width: 460px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__input {
+            margin-top: 4px;
+            padding: 14px 25px;
+        }
+        &__btn {
+            padding: 16px;
+            margin-top: 18px;
+        }
+        &__label {
+            font-size: 16px;
+            margin-top: 14px;
+        }
+        .form__radio {
+            margin-top: 14px;
+            font-size: 16px;
+        }
+        .fake-radio {
+            width: 18px !important;
+            height: 18px !important;
+        }
+        .fake-radio::before {
+            width: 6px;
+            height: 6px;
+        }
+    }
+    .modal-question {
+        &__textarea {
+            height: 80px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .modal-order {
+        &__dialog {
+            max-width: 440px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-order {
+        &__dialog {
+            max-width: 420px;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__form {
+            padding: 30px;
+        }
+        &__input {
+            border: 1px solid $dark;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        .select::after {
+            top: 30%;
+            right: 20px;
+        }
+        &__label {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+        &__radio {
+            font-size: 14px;
+        }
+        &__btn {
+            font-size: 18px;
+            margin-top: 16px;
+            padding: 14px;
+        }
+    }
+}

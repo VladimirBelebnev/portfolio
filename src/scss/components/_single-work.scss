@@ -1,0 +1,455 @@
+.works__section {
+    padding: 200px 0 160px !important;
+}
+.works-section__title {
+    font-weight: 500 !important;
+}
+
+.single-work {
+    &__header {
+        margin-bottom: 70px;
+    }
+    &__type {
+        background: $red;
+        border-radius: 5px;
+        width: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        color: $white;
+    }
+    &__title {
+        margin-top: 15px;
+        font-weight: 500 !important;
+    }
+    &__subtitle {
+        margin-top: 30px;
+        font-size: 36px;
+        color: $dark;
+    }
+    &__photo {
+        pointer-events: none;
+        width: 100%;
+    }
+    &__content {
+        margin-top: 70px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 28px;
+        text-align: center;
+        color: $text;
+    }
+    .link__wrap {
+        display: flex;
+        justify-content: center;
+    }
+    &__link {
+        margin-top: 55px;
+        padding: 22px 55px;
+        font-weight: 500;
+        font-size: 28px;
+        color: #0197F6;
+        border: 3px solid #0197F6;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        transition: all .5s;
+    }
+    &__link:hover {
+        background: #0197F6;
+        color: $white;
+    }
+    .img__wrap {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__mobile {
+        max-width: 700px;
+        pointer-events: none;
+    }
+    .review {
+        margin: 0 auto;
+        max-width: 830px;
+        min-height: 270px;
+        box-sizing: border-box;
+        padding: 30px;
+        background: #EBEBEB;
+        border-radius: 25px;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        &__photo {
+            pointer-events: none;
+            width: 112px;
+        }
+        &__name {
+            font-weight: 500;
+            font-size: 24px;
+            color: $text;
+        }
+        &__post {
+            margin-top: 5px;
+            font-weight: 400;
+            font-size: 20px;
+            color: $text;
+        }
+        &__text {
+            margin-top: 35px;
+            font-weight: 400;
+            font-size: 20px;
+            color: $text;
+        }
+    }
+    .question__wrap {
+        margin-top: 50px;
+        text-align: center;
+    }
+    &__question {
+        font-weight: 500;
+        font-size: 36px;
+        color: $text;
+    }
+    &__btn {
+        margin-top: 50px;
+        padding: 24px 85px;
+        background: $red;
+        border: none;
+        font-weight: 700;
+        font-size: 28px;
+        color: $white;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        transition: background .3s;
+    }
+    &__btn:hover {
+        background: #CA152D;
+    }
+}
+
+@media (max-width: 1680px) {
+    .works__section {
+        padding: 170px 0 140px !important;
+    }
+    .single-work {
+        &__header {
+            margin-bottom: 50px;
+        }
+        &__type {
+            width: 250px;
+            font-size: 16px;
+        }
+        &__subtitle {
+            margin-top: 25px;
+            font-size: 32px;
+        }
+        &__content {
+            margin-top: 50px;
+        }
+        &__descr {
+            font-size: 24px;
+        }
+        &__link {
+            margin-top: 45px;
+            padding: 20px 50px;
+            font-size: 24px;
+        }
+        &__mobile {
+            max-width: 600px;
+        }
+
+        .review {
+            max-width: 780px;
+            min-height: 250px;
+            padding: 28px;
+            gap: 35px;
+            &__photo {
+                width: 98px;
+            }
+            &__name {
+                font-size: 20px;
+
+            }
+            &__post {
+                font-size: 18px;
+            }
+
+            &__text {
+                margin-top: 30px;
+                font-size: 18px;
+            }
+        }
+        .question__wrap {
+            margin-top: 40px;
+        }
+        &__question {
+            font-size: 32px;
+        }
+
+        &__btn {
+            margin-top: 40px;
+            padding: 22px 75px;
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .works__section {
+        padding: 140px 0 110px !important;
+    }
+    .single-work {
+        &__header {
+            margin-bottom: 40px;
+        }
+        &__type {
+            width: 220px;
+            font-size: 14px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-size: 28px;
+        }
+        &__content {
+            margin-top: 40px;
+        }
+        &__descr {
+            font-size: 22px;
+        }
+        &__link {
+            margin-top: 40px;
+            padding: 18px 50px;
+            font-size: 22px;
+        }
+        &__mobile {
+            max-width: 500px;
+        }
+        .review {
+            max-width: 750px;
+            min-height: 230px;
+            padding: 25px;
+            gap: 30px;
+            &__photo {
+                width: 88px;
+            }
+            &__text {
+                margin-top: 25px;
+            }
+        }
+        .question__wrap {
+            margin-top: 35px;
+        }
+        &__question {
+            font-size: 30px;
+        }
+        &__btn {
+            margin-top: 35px;
+            padding: 20px 70px;
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .works__section {
+        padding: 120px 0 100px !important;
+    }
+    .single-work {
+        &__header {
+            margin-bottom: 40px;
+        }
+
+        &__type {
+            width: 200px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-size: 26px;
+        }
+        &__descr {
+            font-size: 20px;
+        }
+
+        &__link {
+            margin-top: 35px;
+            padding: 18px 45px;
+            font-size: 20px;
+        }
+        &__mobile {
+            max-width: 450px;
+        }
+
+        .review {
+            max-width: 700px;
+            min-height: 210px;
+            gap: 25px;
+            &__photo {
+                width: 88px;
+            }
+            &__text {
+                margin-top: 20px;
+            }
+        }
+        .question__wrap {
+            margin-top: 30px;
+        }
+        &__question {
+            font-size: 28px;
+        }
+        &__btn {
+            margin-top: 30px;
+            padding: 18px 65px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .single-work {
+        &__mobile {
+            max-width: 450px;
+        }
+        .review {
+            max-width: 650px;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .works__section {
+        padding: 120px 0 80px !important;
+    }
+    .single-work {
+        &__type {
+            width: 180px;
+            font-size: 12px;
+        }
+        &__title {
+            margin-top: 10px;
+        }
+        &__subtitle {
+            margin-top: 15px;
+            font-size: 24px;
+        }
+        &__descr {
+            font-size: 18px;
+        }
+        &__link {
+            margin-top: 30px;
+            padding: 16px 40px;
+            font-size: 18px;
+        }
+        &__mobile {
+            max-width: 400px;
+        }
+        .review {
+            min-height: 200px;
+            gap: 20px;
+            &__photo {
+                width: 78px;
+            }
+            &__name {
+                font-size: 18px;
+            }
+            &__post {
+                font-size: 16px;
+            }
+            &__text {
+                font-size: 16px;
+                margin-top: 15px;
+            }
+        }
+        &__question {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .works__section {
+        padding: 110px 0 70px !important;
+    }
+    .single-work {
+        &__header {
+            margin-bottom: 30px;
+        }
+        &__content {
+            margin-top: 25px;
+        }
+        &__subtitle {
+            margin-top: 15px;
+            font-size: 22px;
+        }
+        &__link {
+            margin-top: 25px;
+        }
+        .question__wrap {
+            margin-top: 25px;
+        }
+        &__question {
+            font-size: 24px;
+        }
+        &__btn {
+            margin-top: 25px;
+            padding: 16px 45px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .works__section {
+        padding: 110px 0 60px !important;
+    }
+    .single-work {
+        &__type {
+            width: 160px;
+        }
+        &__title {
+            margin-top: 5px;
+        }
+        &__subtitle {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        &__link {
+            margin-top: 25px;
+            padding: 14px 35px;
+            font-size: 16px;
+        }
+        &__mobile {
+            max-width: 350px;
+        }
+        .review {
+            min-height: 180px;
+            gap: 15px;
+            padding: 20px;
+            &__photo {
+                width: 68px;
+            }
+            &__text {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+        &__question {
+            font-size: 20px;
+        }
+        &__btn {
+            padding: 16px 40px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .single-work {
+        &__mobile {
+            max-width: 300px;
+        }
+    }
+}

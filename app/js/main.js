@@ -21,6 +21,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scroll */ "./src/js/components/scroll.js");
 /* harmony import */ var _components_formMask__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/formMask */ "./src/js/components/formMask.js");
 /* harmony import */ var _components_formMask__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_formMask__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -211,8 +214,128 @@ function marquee(selector, speed, sign) {
   }, 0);
 }
 
-window.addEventListener('load', marquee('.marquee-left', 0.2, '-'));
-window.addEventListener('load', marquee('.marquee-right', 0.2, '+'));
+try {
+  window.addEventListener('load', marquee('.marquee-left', 0.2, '-'));
+  window.addEventListener('load', marquee('.marquee-right', 0.2, '+'));
+} catch (error) {
+  console.log(error);
+}
+
+/***/ }),
+
+/***/ "./src/js/components/modal.js":
+/*!************************************!*\
+  !*** ./src/js/components/modal.js ***!
+  \************************************/
+/***/ (() => {
+
+const modals = () => {
+  let btnPressed = false;
+  let modalShow = true;
+  const orderModal = document.querySelector('.modal-order'),
+        btnsOrderModal = document.querySelectorAll('.modal-order__trigger'),
+        closeOrderModal = orderModal.querySelector('.modal-order__close'),
+        questionModal = document.querySelector('.modal-question'),
+        closeQuestionModal = document.querySelector('.modal-question__close');
+
+  const showModal = selector => {
+    selector.classList.remove('hidden');
+    selector.querySelector('.modal-order__content').classList.add('animate__animated', 'animate__fadeInDown');
+    modalShow = false;
+  };
+
+  const hideModal = selector => {
+    selector.classList.add('hidden');
+    selector.querySelector('.modal-order__content').classList.remove('animate__animated', 'animate__fadeInDown');
+    modalShow = false;
+  };
+
+  const openModal = (btns, modal) => {
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        showModal(modal);
+        btnPressed = true;
+      });
+    });
+  };
+
+  const resetForm = selector => {
+    if (selector.querySelector('form')) {
+      selector.querySelector('form').reset();
+    }
+  };
+
+  const closeModal = (btn, modal) => {
+    btn.addEventListener('click', () => {
+      hideModal(modal);
+      resetForm(modal);
+    });
+    modal.addEventListener('click', event => {
+      if (event.target === modal) {
+        hideModal(modal);
+        resetForm(modal);
+      }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.code === 'Escape' && modal) {
+        hideModal(modal);
+        resetForm(modal);
+      }
+    });
+  };
+
+  function showModalByTime() {
+    setTimeout(() => {
+      document.querySelectorAll('[data-modal]').forEach(item => {
+        if (!item.classList.contains('hidden')) {
+          modalShow = false;
+        }
+      });
+
+      try {
+        if (!btnPressed && modalShow) {
+          document.querySelector('.modal-question').classList.remove('hidden');
+          questionModal.querySelector('.modal-question__content').classList.add('animate__animated', 'animate__fadeInDown');
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }, 60000);
+  }
+
+  showModalByTime();
+
+  function showModalByScroll() {
+    if (!btnPressed && modalShow && window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+      try {
+        document.querySelector('.modal-question').classList.remove('hidden');
+        questionModal.querySelector('.modal-question__content').classList.add('animate__animated', 'animate__fadeInDown');
+      } catch (error) {
+        console.log(error);
+      }
+
+      window.removeEventListener('scroll', showModalByScroll);
+    }
+  }
+
+  openModal(btnsOrderModal, orderModal);
+  closeModal(closeOrderModal, orderModal);
+
+  try {
+    window.addEventListener('scroll', showModalByScroll);
+    closeModal(closeQuestionModal, questionModal);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  try {
+    modals();
+  } catch (error) {
+    console.log(err);
+  }
+});
 
 /***/ }),
 
