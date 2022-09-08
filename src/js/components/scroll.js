@@ -13,7 +13,7 @@ const easyScrolling = () => {
             if (section.classList.contains('about') || section.classList.contains('form')) {
                 scrollIntoView(section, {
                     behavior: "smooth",
-                    block: "center",
+                    block: "center"
                 });
             } else {
                 scrollIntoView(section, {
@@ -23,9 +23,20 @@ const easyScrolling = () => {
             }
         });
     });
+
+    if (document.documentElement.clientWidth < 992) {
+        const sections = document.querySelectorAll('section');
+
+        const addMargin = () => {
+            sections.forEach(section => {
+                section.style.scrollMarginTop = getComputedStyle(document.querySelector('header')).height;
+            });
+        };
+
+        addMargin();
+    }
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-
     easyScrolling();
 });

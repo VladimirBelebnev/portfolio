@@ -17,12 +17,14 @@
     &__close {
         position: absolute;
         top: 8px;
-        right: 16px;
+        right: 20px;
         font-size: 40px;
         color: #000;
         opacity: .7;
         font-weight: 700;
         border: none;
+        margin: 0;
+        padding: 0;
         background-color: transparent;
         cursor: pointer;
         transition: opacity .3s;
@@ -83,7 +85,7 @@
     opacity: 0 !important;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1680px) {
     .modal-order {
         &__dialog {
             max-width: 480px;
